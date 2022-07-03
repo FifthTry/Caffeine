@@ -52,10 +52,6 @@ resume: $s.john-doe
 
 
 
-
-
-
-
 -- ftd.column full-page:
 res.resume resume:
 width: fill
