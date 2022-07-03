@@ -479,14 +479,11 @@ $loop$: $resume.work as $obj
 
 --- container: right-side
 
-
-
 --- ftd.column:
 width: fill
 if: $resume.project is not empty
 
 --- data-card: Project
-
 
 --- project-card-resume:
 name: $obj.name
@@ -502,7 +499,6 @@ type: $obj.type
 $loop$: $resume.project as $obj
 
 --- container: right-side
-
 
 --- ftd.column:
 if: $resume.certificate is not empty
@@ -533,8 +529,6 @@ summary: $obj.summary
 $loop$: $resume.award as $obj
 
 --- container: right-side
-
-
 
 --- ftd.column:
 width: fill
@@ -713,7 +707,6 @@ width: fill
 if: $resume.project is not empty
 
 --- data-card: Project
-
 
 --- project-card-resume:
 name: $obj.name
@@ -895,6 +888,7 @@ icon: 👨‍👧
 
 --- image-text: $dateOfBirth
 icon: 🗓
+
 
 
 
