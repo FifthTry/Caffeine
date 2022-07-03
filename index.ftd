@@ -42,11 +42,6 @@ weight: 700
 
 
 
-
-
-
-
-
 -- ds.page:
 
 --- show-resume:
@@ -462,7 +457,6 @@ min-height: percent 100
 --- ftd.column:
 if: $resume.work is not empty
 width: fill
-
 
 --- data-card: WORK EXPERIENCES
 
