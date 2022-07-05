@@ -45,7 +45,7 @@ weight: 700
 -- ds.page:
 
 --- show-resume:
-resume: $s.john-doe
+resume: $s.Aviral
 
 
 
@@ -144,7 +144,7 @@ margin-top: $fpm.space.space-4
 margin-bottom: $fpm.space.space-4
 padding-horizontal: $fpm.space.space-6
 
---- data-card: PROFILE
+--- data-card: About me
 
 --- ftd.text:
 text: $summary
@@ -347,7 +347,7 @@ res.resume resume:
 
 --- ftd.column:
 id: left-side
-width: percent 25
+width: percent 27
 height: fill
 min-height: percent 100
 background-color: $fpm.color.main.text-strong
@@ -415,7 +415,7 @@ padding-horizontal: $fpm.space.space-6
 
 --- heading: Interest
 
---- interst-card: 
+--- interst-card:
 name: $obj.name
 keyword: $obj.keyword
 $loop$: $resume.interest as $obj
@@ -446,7 +446,7 @@ $loop$: $resume.education as $obj
 
 --- ftd.column:
 id: right-side
-width: percent 80
+width: percent 70
 height: fill
 min-height: percent 100
 
@@ -494,7 +494,7 @@ $loop$: $resume.project as $obj
 if: $resume.certificate is not empty
 width: fill
 
---- data-card: CERTIFICATES
+/--- data-card: CERTIFICATES
 
 --- certificate-card-resume:
 name: $obj.name
@@ -522,11 +522,11 @@ $loop$: $resume.award as $obj
 
 --- ftd.column:
 width: fill
-if: $resume.volunteer is not empty
+if: $resume.PoR is not empty
 
---- data-card: Volunteer
+--- data-card: Post of Responsibility
 
---- volunteer-card-resume:
+--- PoR-card-resume:
 organization: $obj.organization
 position: $obj.position
 url: $obj.url
@@ -534,7 +534,7 @@ startDate: $obj.startDate
 endDate: $obj.endDate
 highlights: $obj.highlights
 summary: $obj.summary
-$loop$: $resume.volunteer as $obj
+$loop$: $resume.PoR as $obj
 
 --- container: right-side
 
@@ -638,7 +638,7 @@ padding-horizontal: $fpm.space.space-6
 
 --- heading: Interest
 
---- interst-card: 
+--- interst-card:
 name: $obj.name
 keyword: $obj.keyword
 $loop$: $resume.interest as $obj
@@ -745,11 +745,11 @@ $loop$: $resume.award as $obj
 
 --- ftd.column:
 width: fill
-if: $resume.volunteer is not empty
+if: $resume.PoR is not empty
 
---- data-card: Volunteer
+--- data-card: PoR
 
---- volunteer-card-resume:
+--- PoR-card-resume:
 organization: $obj.organization
 position: $obj.position
 url: $obj.url
@@ -757,7 +757,7 @@ startDate: $obj.startDate
 endDate: $obj.endDate
 highlights: $obj.highlights
 summary: $obj.summary
-$loop$: $resume.volunteer as $obj
+$loop$: $resume.PoR as $obj
 
 --- container: right-side
 
@@ -1001,7 +1001,7 @@ border-width: 1
 border-color: $fpm.color.main.text-strong
 
 --- ftd.row:
-if: $level == ovice
+if: $level == Novice
 min-height: 12
 margin-top: -1
 margin-bottom: -1
@@ -1964,7 +1964,7 @@ width if $is-mobile: percent 40
 
 
 
--- ftd.column volunteer-card-resume:
+-- ftd.column PoR-card-resume:
 optional caption organization:
 optional string position:
 optional string url:
