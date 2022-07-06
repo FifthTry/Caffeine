@@ -478,7 +478,7 @@ $loop$: $resume.work as $obj
 width: fill
 if: $resume.project is not empty
 
---- data-card: PROJECT
+--- data-card: PROJECTS
 
 --- project-card-resume:
 name: $obj.name
