@@ -499,7 +499,7 @@ $loop$: $resume.project as $obj
 if: $resume.certificate is not empty
 width: fill
 
-/--- data-card: CERTIFICATES
+--- data-card: CERTIFICATES
 
 --- certificate-card-resume:
 name: $obj.name
@@ -522,6 +522,28 @@ date: $obj.date
 awarder:  $obj.awarder
 summary: $obj.summary
 $loop$: $resume.award as $obj
+
+
+--- container: right-side
+
+--- ftd.column:
+width: fill
+if: $resume.volunteer is not empty
+
+--- data-card: VOLUNTEERS
+
+--- ftd.column:
+width: fill
+
+--- volunteer-card-resume:
+organization: $obj.organization
+position: $obj.position
+url: $obj.url
+startDate: $obj.startDate
+endDate: $obj.endDate
+highlights: $obj.highlights
+summary: $obj.summary
+$loop$: $resume.volunteer as $obj
 
 --- container: right-side
 
@@ -732,6 +754,29 @@ awarder:  $obj.awarder
 summary: $obj.summary
 $loop$: $resume.award as $obj
 
+
+--- container: right-side
+
+--- ftd.column:
+width: fill
+if: $resume.volunteer is not empty
+
+--- data-card: VOLUNTEERS
+
+--- ftd.column:
+width: fill
+
+--- volunteer-card-resume:
+organization: $obj.organization
+position: $obj.position
+url: $obj.url
+startDate: $obj.startDate
+endDate: $obj.endDate
+highlights: $obj.highlights
+summary: $obj.summary
+$loop$: $resume.volunteer as $obj
+
+
 --- container: right-side
 
 --- ftd.column:
@@ -891,6 +936,7 @@ role: $font-12
 caption title:
 role: $copy-tight-bold
 color: $fpm.color.main.text-strong
+color if $is-mobile: $fpm.color.main.text
 margin-bottom: $fpm.space.space-6
 padding-bottom: $fpm.space.space-1
 border-bottom: 2
@@ -977,7 +1023,7 @@ border-width: 1
 border-color: $fpm.color.main.text
 
 --- ftd.row:
-if: $level == Novice
+if: $level == ovice
 min-height: 12
 margin-top: -1
 margin-bottom: -1
