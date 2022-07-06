@@ -38,14 +38,16 @@ mobile: $copy-tight-bold-desktop
 xl: $copy-tight-bold-desktop
 weight: 700
 
-
+-- ftd.color bright-grey:
+light: rgba(230, 225, 222, 1)
+dark: rgba(230, 225, 222, 1)
 
 
 
 -- ds.page:
 
 --- show-resume:
-resume: $s.Aviral
+resume: $s.john-doe
 
 
 
@@ -146,15 +148,15 @@ if: $summary is not null
 width: fill
 margin-top: $fpm.space.space-4
 margin-bottom: $fpm.space.space-4
-padding-horizontal: $fpm.space.space-6
 
---- data-card: About me
+--- data-card: ABOUT ME
 
 --- ftd.text:
 text: $summary
 role: $fpm.type.fine-print
-color: $fpm.color.main.text
+color: $fpm.color.main.text-strong
 padding-top: $fpm.space.space-4
+padding-horizontal: $fpm.space.space-6
 
 
 
@@ -169,8 +171,9 @@ padding-top: $fpm.space.space-4
 optional ftd.image-src image: 
 optional body summary:
 width: fill
-padding-horizontal: $fpm.space.space-6
 padding-top: $fpm.space.space-6
+padding-horizontal: $fpm.space.space-6
+
 
 --- ftd.image:
 if: $image is not null
@@ -186,12 +189,10 @@ width: fill
 margin-top: $fpm.space.space-4
 margin-bottom: $fpm.space.space-4
 
---- data-card: Profile
-
 --- ftd.text:
 text: $summary
 role: $fpm.type.fine-print
-color: $fpm.color.main.text
+color: $fpm.color.main.text-strong
 
 
 
@@ -206,10 +207,10 @@ color: $fpm.color.main.text
 caption title:
 border-bottom: 2
 padding-bottom: $fpm.space.space-2
-border-color: $fpm.color.main.custom.two
-margin-left: $fpm.space.space-6
+border-color: $fpm.color.main.background.step-2
+margin-left if not $is-mobile: $fpm.space.space-6
 role: $copy-tight-bold
-color: $fpm.color.main.text-strong
+color: $fpm.color.main.text
 margin-top: $fpm.space.space-9
 margin-top if $is-mobile: $fpm.space.space-6
 margin-bottom: $fpm.space.space-6
@@ -224,7 +225,7 @@ margin-bottom: $fpm.space.space-6
 
 
 -- ftd.row profile-card:
-background-color: $fpm.color.main.custom.two
+background-color: $fpm.color.main.background.step-2
 optional caption title:
 optional string label:
 width: fill
@@ -247,7 +248,7 @@ label: $label
 
 
 -- ftd.row profile-card-desktop:
-background-color: $fpm.color.main.custom.two
+background-color: $fpm.color.main.background.step-2
 padding-vertical: $fpm.space.space-8
 optional caption title:
 optional string label:
@@ -287,7 +288,7 @@ margin-top: -12
 
 
 -- ftd.column profile-card-mobile:
-background-color: $fpm.color.main.custom.two
+background-color: $fpm.color.main.background.step-2
 padding-vertical: $fpm.space.space-6
 caption title:
 string label:
@@ -362,7 +363,7 @@ background-color: $fpm.color.main.background.base
 padding-vertical: $fpm.space.space-6
 padding-horizontal: $fpm.space.space-6
 
---- heading: Contact
+--- heading: CONTACT:
 
 --- contact-card:
 candidate-email-address: $resume.basic.email
@@ -384,7 +385,7 @@ background-color: $fpm.color.main.border
 padding-vertical: $fpm.space.space-6
 padding-horizontal: $fpm.space.space-6
 
---- heading: Skills
+--- heading: SKILLS:
 
 --- skill-card-resume:
 name: $obj.name
@@ -396,11 +397,11 @@ $loop$: $resume.skill as $obj
 --- ftd.column:
 if: $resume.profile is not empty
 width: fill
-background-color: $fpm.color.main.cta-tertiary.base
+background-color: $fpm.color.main.background.step-2
 padding-vertical: $fpm.space.space-6
 padding-horizontal: $fpm.space.space-6
 
---- heading: SOCIAL
+--- heading: SOCIAL:
 
 --- social-card-resume:
 network: $obj.network
@@ -417,7 +418,7 @@ background-color: $fpm.color.main.border
 padding-vertical: $fpm.space.space-6
 padding-horizontal: $fpm.space.space-6
 
---- heading: Interest
+--- heading: INTEREST
 
 --- interst-card:
 name: $obj.name
@@ -429,11 +430,11 @@ $loop$: $resume.interest as $obj
 --- ftd.column:
 if: $resume.education is not empty
 width: fill
-background-color: $fpm.color.main.background.step-2
+background-color: $fpm.color.main.background.base
 padding-vertical: $fpm.space.space-6
 padding-horizontal: $fpm.space.space-6
 
---- heading: Education
+--- heading: EDUCATION
 
 --- education-card-resume:
 institution: $obj.institution
@@ -477,7 +478,7 @@ $loop$: $resume.work as $obj
 width: fill
 if: $resume.project is not empty
 
---- data-card: Project
+--- data-card: PROJECT
 
 --- project-card-resume:
 name: $obj.name
@@ -526,24 +527,6 @@ $loop$: $resume.award as $obj
 
 --- ftd.column:
 width: fill
-if: $resume.PoR is not empty
-
---- data-card: Post of Responsibility
-
---- PoR-card-resume:
-organization: $obj.organization
-position: $obj.position
-url: $obj.url
-startDate: $obj.startDate
-endDate: $obj.endDate
-highlights: $obj.highlights
-summary: $obj.summary
-$loop$: $resume.PoR as $obj
-
---- container: right-side
-
---- ftd.column:
-width: fill
 if: $resume.reference is not empty
 
 --- data-card: REFERENCES
@@ -586,7 +569,7 @@ background-color: $fpm.color.main.background.base
 padding-vertical: $fpm.space.space-6
 padding-horizontal: $fpm.space.space-6
 
---- heading: Contact
+--- heading: CONTACT:
 
 --- contact-card:
 candidate-email-address: $resume.basic.email
@@ -608,7 +591,7 @@ background-color: $fpm.color.main.border
 padding-vertical: $fpm.space.space-6
 padding-horizontal: $fpm.space.space-6
 
---- heading: skill
+--- heading: SKILLS:
 
 --- skill-card-resume:
 name: $obj.name
@@ -620,10 +603,10 @@ $loop$: $resume.skill as $obj
 --- ftd.column:
 if: $resume.profile is not empty
 width: fill
-background-color: $fpm.color.main.cta-tertiary.base
+background-color: $fpm.color.main.background.step-2
 padding-vertical: $fpm.space.space-6
 padding-horizontal: $fpm.space.space-6
---- heading: SOCIAL
+--- heading: SOCIAL:
 
 --- social-card-resume:
 network: $obj.network
@@ -640,7 +623,7 @@ background-color: $fpm.color.main.border
 padding-vertical: $fpm.space.space-6
 padding-horizontal: $fpm.space.space-6
 
---- heading: Interest
+--- heading: INTEREST:
 
 --- interst-card:
 name: $obj.name
@@ -652,11 +635,15 @@ $loop$: $resume.interest as $obj
 --- ftd.column:
 if: $resume.education is not empty
 width: fill
-background-color: $fpm.color.main.background.step-2
+background-color: $fpm.color.main.background.base
 padding-vertical: $fpm.space.space-6
-padding-horizontal: $fpm.space.space-6
+padding-horizontal: $fpm.space.space-1
 
---- heading: Education
+--- heading: EDUCATION:
+
+--- ftd.column:
+width: fill
+padding-horizontal if $is-mobile: $fpm.space.space-3
 
 --- education-card-resume:
 institution: $obj.institution
@@ -700,7 +687,7 @@ $loop$: $resume.work as $obj
 width: fill
 if: $resume.project is not empty
 
---- data-card: Project
+--- data-card: PROJECT
 
 --- project-card-resume:
 name: $obj.name
@@ -744,24 +731,6 @@ date: $obj.date
 awarder:  $obj.awarder
 summary: $obj.summary
 $loop$: $resume.award as $obj
-
---- container: right-side
-
---- ftd.column:
-width: fill
-if: $resume.PoR is not empty
-
---- data-card: PoR
-
---- PoR-card-resume:
-organization: $obj.organization
-position: $obj.position
-url: $obj.url
-startDate: $obj.startDate
-endDate: $obj.endDate
-highlights: $obj.highlights
-summary: $obj.summary
-$loop$: $resume.PoR as $obj
 
 --- container: right-side
 
@@ -815,7 +784,7 @@ margin-bottom: $fpm.space.space-2
 
 --- ftd.text: 📍
 color: $fpm.color.main.text
-role: $font-12
+role: $fpm.type.fine-print
 width: 30
 min-width: 30
 
@@ -828,21 +797,21 @@ spacing: 4
 
 --- ftd.text: $candidate-address
 if: $candidate-address is not null
-color: $fpm.color.main.text
+color: $fpm.color.main.background.step-2
 role: $font-12
 
 --- container: switch-container
 
 --- ftd.text: $candidate-address-city
 if: $candidate-address-city is not null
-color: $fpm.color.main.text
+color: $fpm.color.main.background.step-2
 role: $font-12
 
 --- container: switch-container
 
 --- ftd.text: $candidate-address-region
 if: $candidate-address-region is not null
-color: $fpm.color.main.text
+color: $fpm.color.main.background.step-2
 role: $font-12
 
 --- container: switch-container
@@ -853,19 +822,19 @@ id: address-container
 
 --- ftd.text: $candidate-address-countryCode
 if: $candidate-address-countryCode is not null
-color: $fpm.color.main.text
+color: $fpm.color.main.background.step-2
 role: $font-12
 
 --- container: address-container
 
 --- ftd.text: ,
 if: $candidate-address-postalCode is not null
-color: $fpm.color.main.text
+color: $fpm.color.main.background.step-2
 role: $font-12
 
 --- ftd.text: $candidate-address-postalCode
 if: $candidate-address-postalCode is not null
-color: $fpm.color.main.text
+color: $fpm.color.main.background.step-2
 role: $font-12
 margin-left: $fpm.space.space-2
 
@@ -900,14 +869,14 @@ width: fill
 margin-bottom: $fpm.space.space-2
 
 --- ftd.text: $icon
-color: $fpm.color.main.text
+color: $fpm.color.main.background.step-2
 role: $fpm.type.fine-print
 width: 30
 
 --- ftd.text: $title
 if: $title is not null
-color: $fpm.color.main.text
-role: $fpm.type.fine-print
+color: $fpm.color.main.background.step-2
+role: $font-12
 
 
 
@@ -923,6 +892,9 @@ caption title:
 role: $copy-tight-bold
 color: $fpm.color.main.text-strong
 margin-bottom: $fpm.space.space-6
+padding-bottom: $fpm.space.space-1
+border-bottom: 2
+border-color: $fpm.color.main.background.step-2
 
 
 
@@ -977,7 +949,7 @@ if: $name is not null
 width: fill
 width if $is-mobile: percent 40
 role: $font-12
-color: $fpm.color.main.text
+color: $bright-grey
 
 --- container: ftd.main
 
@@ -1002,7 +974,7 @@ caption level:
 width: calc 100% - 1px
 min-height: 10
 border-width: 1
-border-color: $fpm.color.main.text-strong
+border-color: $fpm.color.main.text
 
 --- ftd.row:
 if: $level == Novice
@@ -1011,7 +983,7 @@ margin-top: -1
 margin-bottom: -1
 margin-left: -1
 width: percent 10
-background-color:  $fpm.color.main.text-strong
+background-color:  $fpm.color.main.text
 spacing: 4
 
 --- ftd.text: 10%
@@ -1021,7 +993,7 @@ left if $is-mobile: 20
 top: -3
 width: percent 90
 role: $font-12
-color: $fpm.color.main.text-strong
+color: $fpm.color.main.text
 
 --- container: ftd.main
 
@@ -1032,7 +1004,7 @@ width: percent 25
 margin-top: -1
 margin-bottom: -1
 margin-left: -1
-background-color: $fpm.color.main.text-strong
+background-color: $fpm.color.main.text
 spacing: 4
 
 --- ftd.text: 25%
@@ -1042,7 +1014,7 @@ left: 30
 left if $is-mobile: 45
 width: percent 75
 role: $font-12
-color: $fpm.color.main.text-strong
+color: $fpm.color.main.text
 align: center
 
 --- container: ftd.main
@@ -1054,7 +1026,7 @@ width: percent 50
 margin-top: -1
 margin-bottom: -1
 margin-left: -1
-background-color: $fpm.color.main.text-strong
+background-color: $fpm.color.main.text
 spacing: 4
 
 --- ftd.text: 50%
@@ -1064,7 +1036,7 @@ left if $is-mobile: 75
 top: -3
 width: percent 50
 role: $font-12
-color: $fpm.color.main.text-strong
+color: $fpm.color.main.text
 
 --- container: ftd.main
 
@@ -1075,7 +1047,7 @@ width: percent 75
 margin-top: -1
 margin-bottom: -1
 margin-left: -1
-background-color: $fpm.color.main.text-strong
+background-color: $fpm.color.main.text
 spacing: 4
 
 --- ftd.text: 75%
@@ -1085,7 +1057,7 @@ left if $is-mobile: 95
 top: -3
 width: percent 25
 role: $font-12
-color: $fpm.color.main.text-strong
+color: $fpm.color.main.text
 
 --- container: ftd.main
 
@@ -1095,7 +1067,7 @@ width: fill
 min-height: 12
 margin-top: -1
 margin-bottom: -1
-background-color: $fpm.color.main.text-strong
+background-color: $fpm.color.main.text
 spacing: 4
 
 --- ftd.text: 100%
@@ -1114,7 +1086,7 @@ color: $fpm.color.main.background.step-1
 
 
 
--- ftd.row education-card-resume:
+-- ftd.column education-card-resume:
 optional caption institution:
 optional string url:
 optional string area:
@@ -1126,20 +1098,24 @@ optional string courses:
 width: fill
 color: $fpm.color.main.text
 margin-bottom: $fpm.space.space-4
+padding-bottom: $fpm.space.space-4
+border-bottom: 1
+border-style: dashed
+border-color: $fpm.color.main.border-strong
 
 --- ftd.column:
 width: fill
 id: education-container
 spacing: 8
 
---- ftd.row:
+--- ftd.column:
 if: $institution is not null
 id: show-container
 
 --- ftd.text: $institution
 if: $url is null
 role: $fpm.type.fine-print
-color: $fpm.color.main.text
+color: $bright-grey
 
 --- container: show-container
 
@@ -1147,14 +1123,15 @@ color: $fpm.color.main.text
 if: $url is not null
 link: $url
 role: $fpm.type.fine-print
-color: $fpm.color.main.text
+color: $bright-grey
+
 
 --- container: education-container
 
---- ftd.text: $courses
-if: $courses is not null
+--- ftd.text: $studyType
 role: $fpm.type.fine-print
-color: $fpm.color.main.text
+color: $bright-grey
+
 
 --- container: education-container
 
@@ -1165,40 +1142,51 @@ color: $fpm.color.main.text
 
 --- container: education-container
 
+--- ftd.text: $courses
+if: $courses is not null
+role: $fpm.type.fine-print
+color: $fpm.color.main.background.step-2
+
+--- container: education-container
+
 --- ftd.row:
 spacing: 8
 if: $score is not null
 
 --- ftd.text: CGPA:
 role: $fpm.type.fine-print
+color: $fpm.color.main.background.step-2
 
 --- ftd.text: $score
 if: $score is not null
 role: $fpm.type.fine-print
-color: $fpm.color.main.text
+color: $fpm.color.main.background.step-2
 
 --- container: ftd.main
 
 --- ftd.column:
 width:  fill
+margin-top: $fpm.space.space-2
 
 --- ftd.row:
 spacing: 4
 
 --- ftd.text: $startDate
 if: $startDate is not null
-role: $fpm.type.fine-print
-color: $fpm.color.main.text
+role: $font-12
+color: $fpm.color.main.background.step-2
+white-space: nowrap
 
 --- ftd.text: \\~
 if: $endDate is not null
 role: $fpm.type.fine-print
-color: $fpm.color.main.text
+color: $fpm.color.main.background.step-2
 
 --- ftd.text: $endDate
 if: $endDate is not null
-role: $fpm.type.fine-print
-color: $fpm.color.main.text
+role: $font-12
+color: $fpm.color.main.background.step-2
+white-space: nowrap
 
 
 
@@ -1219,6 +1207,8 @@ optional string summary:
 optional string location:
 optional string highlights:
 width: fill
+padding-horizontal if not $is-mobile: $fpm.space.space-6
+padding-horizontal if $is-mobile: $fpm.space.space-4
 
 --- work-card-data-desktop: 
 if: not $is-mobile
@@ -1263,20 +1253,24 @@ optional string highlights:
 width: fill
 color: $fpm.color.main.text
 spacing: 8
-padding-left: $fpm.space.space-6
+padding-left: $fpm.space.space-0
 margin-bottom: $fpm.space.space-6
+border-bottom: 1
+border-style: dashed
+border-color: $fpm.color.main.border-strong
+padding-bottom: $fpm.space.space-4
 
 --- ftd.text: $position
 if: $position is not null
 role: $copy-tight-bold
-color: $fpm.color.main.text
+color: $bright-grey
 
 --- container: ftd.main
 
 --- ftd.text: $name
 if: $name is not null
 role: $fpm.type.copy-tight
-color: $fpm.color.main.text
+color: $bright-grey
 
 --- ftd.row:
 spacing: 8
@@ -1284,23 +1278,32 @@ spacing: 8
 --- ftd.text: $startDate
 if: $startDate is not null
 role: $fpm.type.fine-print
+color: $fpm.color.main.background.step-2
 
 --- ftd.text: \\-
 if: $endDate is not null
 role: $fpm.type.fine-print
+color: $fpm.color.main.background.step-2
 
 --- ftd.text: $endDate
 if: $endDate is not null
 role: $fpm.type.fine-print
+color: $fpm.color.main.background.step-2
 
 --- container: ftd.main
+
+--- ftd.text: $highlights
+if: $highlights is not null
+width:fill
+role: $fpm.type.fine-print
+color: $fpm.color.main.background.step-2
 
 --- container: ftd.main
 
 --- ftd.text: $location
 if: $location is not null
 role: $fpm.type.copy-tight
-color: $fpm.color.main.text
+color: $fpm.color.main.background.step-2
 
 --- container: ftd.main
 
@@ -1308,7 +1311,7 @@ color: $fpm.color.main.text
 if: $summary is not null
 width:fill
 role: $fpm.type.fine-print
-color: $fpm.color.main.text
+color: $bright-grey
 padding-bottom: $fpm.space.space-2
 
 
@@ -1333,7 +1336,11 @@ width: fill
 color: $fpm.color.main.text
 spacing: 8
 margin-bottom: $fpm.space.space-4
-padding-horizontal: $fpm.space.space-6
+border-bottom: 1
+border-style: dashed
+border-color: $fpm.color.main.border-strong
+padding-bottom: $fpm.space.space-6
+
 
 --- ftd.row:
 width: fill
@@ -1342,7 +1349,7 @@ id: text-container
 --- ftd.text: $position
 if: $position is not null
 role: $copy-tight-bold
-color: $fpm.color.main.text
+color: $bright-grey
 width: fill
 
 --- container: text-container
@@ -1350,7 +1357,7 @@ width: fill
 --- ftd.text: $name
 if: $name is not null
 role: $fpm.type.fine-print
-color: $fpm.color.main.text
+color: $bright-grey
 width: fill
 
 --- container: text-container
@@ -1359,7 +1366,7 @@ width: fill
 if: $location is not null
 role: $fpm.type.copy-tight
 margin-left: $fpm.space.space-4
-color: $fpm.color.main.text
+color: $fpm.color.main.background.step-2
 width: fill
 
 --- container: text-container
@@ -1372,16 +1379,19 @@ width: fill
 --- ftd.text: $startDate
 if: $startDate is not null
 role: $fpm.type.fine-print
+color: $fpm.color.main.background.step-2
 
 --- container: date-container
 
 --- ftd.text: \\~
 if: $endDate is not null
 role: $fpm.type.fine-print
+color: $fpm.color.main.background.step-2
 
 --- ftd.text: $endDate
 if: $endDate is not null
 role: $fpm.type.fine-print
+color: $fpm.color.main.background.step-2
 
 --- container: ftd.main
 
@@ -1389,7 +1399,7 @@ role: $fpm.type.fine-print
 if: $highlights is not null
 width:fill
 role: $fpm.type.fine-print
-color: $fpm.color.main.text
+color: $fpm.color.main.background.step-2
 
 --- container: ftd.main
 
@@ -1397,7 +1407,7 @@ color: $fpm.color.main.text
 if: $summary is not null
 width:fill
 role: $fpm.type.fine-print
-color: $fpm.color.main.text
+color: $bright-grey
 
 
 
@@ -1443,6 +1453,8 @@ optional string position:
 optional string company:
 optional string reference:
 width: fill
+padding-horizontal: $fpm.space.space-6
+padding-horizontal if $is-mobile: $fpm.space.space-3
 
 --- prefernces-data-desktop:$name
 if: not $is-mobile
@@ -1481,11 +1493,16 @@ optional string reference:
 width: fill
 color: $fpm.color.main.text
 spacing: 8
-padding-left: $fpm.space.space-6
+border-bottom: 1
+border-style: dashed
+border-color: $fpm.color.main.border-strong
+margin-bottom: $fpm.space.space-6
+padding-bottom: $fpm.space.space-6
 
 --- ftd.text: $name
 if: $name is not null
-role: $fpm.type.fine-print
+role: $fpm.type.copy-tight
+color: $bright-grey
 
 --- ftd.row:
 
@@ -1493,16 +1510,19 @@ role: $fpm.type.fine-print
 if: $position is not null
 text: $position
 role: $fpm.type.fine-print
+color: $fpm.color.main.background.step-2
 
 --- ftd.text: ,
 if: $position is not null
 role: $fpm.type.fine-print
+color: $fpm.color.main.background.step-2
 
 --- ftd.text: 
 if: $company is not null
 text: $company
 margin-left: $fpm.space.space-3
 role: $fpm.type.fine-print
+color: $bright-grey
 
 --- container: ftd.main
 
@@ -1511,7 +1531,7 @@ if: $email is not null
 
 --- ftd.text: Email:
 role: $fine-print-bold
-color: $fpm.color.main.text
+color: $fpm.color.main.background.step-2
 
 --- ftd.text:
 if: $email is not null
@@ -1527,7 +1547,7 @@ if: $phone is not null
 
 --- ftd.text: Phone:
 role: $fine-print-bold
-color: $fpm.color.main.text
+color: $fpm.color.main.background.step-2
 
 --- ftd.text:
 if: $phone is not null
@@ -1536,7 +1556,16 @@ role: $fpm.type.fine-print
 color: $fpm.color.main.text
 margin-left: $fpm.space.space-2
 
+--- container: ftd.main
 
+--- ftd.column:
+width: fill
+if: $reference is not null
+
+--- ftd.text:
+text: $reference
+role: $fpm.type.fine-print
+color: $fpm.color.main.background.step-2
 
 
 
@@ -1554,9 +1583,12 @@ optional string company:
 optional string reference:
 width: fill
 color: $fpm.color.main.text
-padding-left: $fpm.space.space-6
-margin-bottom: $fpm.space.space-4
-spacing: 8
+spacing: 12
+border-bottom: 1
+border-style: dashed
+border-color: $fpm.color.main.border-strong
+margin-bottom: $fpm.space.space-6
+padding-bottom: $fpm.space.space-6
 
 --- ftd.row:
 id: text-container
@@ -1564,7 +1596,8 @@ width: fill
 
 --- ftd.text: $name
 if: $name is not null
-role: $fpm.type.fine-print
+role: $copy-tight-bold
+color: $bright-grey
 width: fill
 
 --- container: text-container
@@ -1572,6 +1605,7 @@ width: fill
 --- ftd.text: $position
 if: $position is not null
 role: $fpm.type.fine-print
+color: $fpm.color.main.text
 width: fill
 
 --- container: text-container
@@ -1580,6 +1614,7 @@ width: fill
 if: $company is not null
 margin-left: $fpm.space.space-3
 role: $fpm.type.fine-print
+color: $fpm.color.main.text
 width: fill
 
 --- container: ftd.main
@@ -1589,7 +1624,7 @@ if: $email is not null
 
 --- ftd.text: Email:
 role: $fine-print-bold
-color: $fpm.color.main.text
+color: $fpm.color.main.background.step-2
 
 --- ftd.text: $email
 if: $email is not null
@@ -1604,7 +1639,7 @@ if: $phone is not null
 
 --- ftd.text: Phone:
 role: $fine-print-bold
-color: $fpm.color.main.text
+color: $fpm.color.main.background.step-2
 
 --- ftd.text: $phone
 if: $phone is not null
@@ -1612,7 +1647,16 @@ role: $fpm.type.fine-print
 color: $fpm.color.main.text
 margin-left: $fpm.space.space-2
 
+--- container: ftd.main
 
+--- ftd.column:
+width: fill
+if: $reference is not null
+
+--- ftd.text:
+text: $reference
+role: $fpm.type.fine-print
+color: $fpm.color.main.background.step-2
 
 
 
@@ -1633,6 +1677,9 @@ optional string role:
 optional string entity:
 optional string type:
 width: fill
+padding-horizontal: $fpm.space.space-6
+padding-horizontal if $is-mobile: $fpm.space.space-3
+
 
 --- project-card-data-desktop: $name
 if: not $is-mobile
@@ -1680,9 +1727,12 @@ optional string entity:
 optional string type: 
 color: $fpm.color.main.text
 width: fill
-padding-horizontal: $fpm.space.space-6
 spacing: 12
+border-bottom: 1
+border-style: dashed
+border-color: $fpm.color.main.border-strong
 margin-bottom: $fpm.space.space-6
+padding-bottom: $fpm.space.space-6
 
 --- ftd.row:
 width: fill
@@ -1696,7 +1746,7 @@ id: show-container
 --- ftd.text: $name
 if: $url is null
 role: $copy-tight-bold
-color: $fpm.color.main.text
+color: $bright-grey
 
 --- container: show-container
 
@@ -1704,14 +1754,14 @@ color: $fpm.color.main.text
 if: $url is not null
 link: $url
 role: $copy-tight-bold
-color: $fpm.color.main.text
+color: $bright-grey
 
 --- container: switch-container
 
 --- ftd.text: $role
 if: $role is not null
 role: $fpm.type.fine-print
-color: $fpm.color.main.text
+color: $bright-grey
 width: fill
 
 --- container: switch-container
@@ -1723,27 +1773,31 @@ width: fill
 --- ftd.text: $startDate
 if: $startDate is not null
 role: $fpm.type.fine-print
+color: $fpm.color.main.background.step-2
 
 --- ftd.text: ~
 if: $endDate is not null
 role: $fpm.type.fine-print
+color: $fpm.color.main.background.step-2
 
 --- ftd.text: $endDate
 if: $endDate is not null
 role: $fpm.type.fine-print
+color: $fpm.color.main.background.step-2
 
 --- container: ftd.main
 
 --- ftd.text:$type
 if: $type is not null
 role: $fpm.type.fine-print
+color: $fpm.color.main.background.step-2
 
 --- container: ftd.main
 
 --- ftd.text: $entity
 if: $entity is not null
 role: $fpm.type.fine-print
-color: $fpm.color.main.text
+color: $fpm.color.main.background.step-2
 
 --- container: ftd.main
 
@@ -1751,6 +1805,7 @@ color: $fpm.color.main.text
 if: $keyword is not null
 role: $fpm.type.fine-print
 color: $fpm.color.main.text
+color: $fpm.color.main.background.step-2
 
 --- container: ftd.main
 
@@ -1765,7 +1820,7 @@ color: $fpm.color.main.text
 if: $description is not null
 width:fill
 role: $fpm.type.fine-print
-color: $fpm.color.main.text
+color: $bright-grey
 
 
 
@@ -1788,9 +1843,13 @@ optional string role:
 optional string entity:
 optional string type:
 color: $fpm.color.main.text
-padding-left: $fpm.space.space-6
-margin-bottom: $fpm.space.space-6
+width: fill
 spacing: 12
+border-bottom: 1
+border-style: dashed
+border-color: $fpm.color.main.border-strong
+margin-bottom: $fpm.space.space-6
+padding-bottom: $fpm.space.space-6
 
 --- ftd.row:
 width: fill
@@ -1800,7 +1859,7 @@ id: show-container
 --- ftd.text: $name
 if: $url is null
 role: $copy-tight-bold
-color: $fpm.color.main.text
+color: $bright-grey
 
 --- container: show-container
 
@@ -1808,13 +1867,14 @@ color: $fpm.color.main.text
 if: $url is not null
 link: $url
 role: $copy-tight-bold
-color: $fpm.color.main.text
+color: $bright-grey
 
 --- container: ftd.main
 
 --- ftd.text:$type
 if: $type is not null
 role: $fpm.type.fine-print
+color: $fpm.color.main.background.step-2
 
 --- container: ftd.main
 
@@ -1824,42 +1884,45 @@ spacing: 8
 --- ftd.text: $startDate
 if: $startDate is not null
 role: $fpm.type.fine-print
+color: $fpm.color.main.background.step-2
 
 --- ftd.text: ~
 if: $endDate is not null
 role: $fpm.type.fine-print
+color: $fpm.color.main.background.step-2
 
 --- ftd.text: $endDate
 if: $endDate is not null
 role: $fpm.type.fine-print
+color: $fpm.color.main.background.step-2
 
 --- container: ftd.main
 
 --- ftd.text: $role
 if: $role is not null
 role: $fpm.type.fine-print
-color: $fpm.color.main.text
+color: $bright-grey
 
 --- container: ftd.main
 
 --- ftd.text: $entity
 if: $entity is not null
 role: $fpm.type.fine-print
-color: $fpm.color.main.text
+color: $fpm.color.main.background.step-2
 
 --- container: ftd.main
 
 --- ftd.text: $keyword
 if: $keyword is not null
 role: $fpm.type.fine-print
-color: $fpm.color.main.text
+color: $fpm.color.main.background.step-2
 
 --- container: ftd.main
 
 --- ftd.text: $highlights
 if: $highlights is not null
 role: $fpm.type.fine-print
-color: $fpm.color.main.text
+color: $fpm.color.main.background.step-2
 
 --- container: ftd.main
 
@@ -1868,7 +1931,7 @@ if: $description is not null
 width:fill
 role: $fpm.type.fine-print
 padding-bottom: $fpm.space.space-2
-color: $fpm.color.main.text
+color: $bright-grey
 
 
 
@@ -1892,13 +1955,12 @@ width if $is-mobile: percent 40
 
 --- ftd.text: $network
 if: $network is not null
-role: $fine-print-bold
+role: $font-12
 color: $fpm.color.main.text
 
 --- ftd.text: :
-role: $fine-print-bold
+role: $font-12
 color: $fpm.color.main.text
-margin-left: $fpm.space.space-1
 
 --- container: ftd.main
 
@@ -1918,8 +1980,8 @@ color: $fpm.color.main.text
 --- ftd.text: $username
 if: $url is not null
 link: $url
-role: $fpm.type.fine-print
-color: $fpm.color.main.text
+role: $font-12
+color: $bright-grey
 
 
 
@@ -1943,17 +2005,16 @@ width if $is-mobile: percent 40
 --- ftd.text: $name
 if: $name is not null
 color: $fpm.color.main.text
-role: $copy-tight-bold
+role: $font-12
 
 ---  ftd.text: :
 color: $fpm.color.main.text
-role: $copy-tight-bold
-margin-left: $fpm.space.space-1
+role: $font-12
 
 --- container: ftd.main
 
 ---  ftd.text: $keyword
-color: $fpm.color.main.text
+color: $bright-grey
 role: $font-12
 align: center
 width: percent 70
@@ -1968,7 +2029,7 @@ width if $is-mobile: percent 40
 
 
 
--- ftd.column PoR-card-resume:
+-- ftd.row volunteer-card-resume:
 optional caption organization:
 optional string position:
 optional string url:
@@ -1977,116 +2038,111 @@ optional string endDate:
 optional string summary:
 optional string highlights:
 width: fill
-color: $fpm.color.main.text
-spacing: 8
-padding-left if $is-mobile: $fpm.space.space-6
-padding-horizontal if not $is-mobile: $fpm.space.space-7
-margin-bottom: $fpm.space.space-6
+padding-horizontal: $fpm.space.space-6
+padding-horizontal if $is-mobile: $fpm.space.space-3
 
---- ftd.row:
+
+--- volunteer-card-resume-desktop: $organization
 if: not $is-mobile
-width: fill
-id: switch-container
+url: $url
+position: $position
+summary: $summary
+highlights: $highlights
+startDate: $startDate
+endDate: $endDate
 
---- ftd.row:
-width: fill
-id: show-container
-
---- ftd.text: $organization
-if: $url is not null
-link: $url
-role: $copy-tight-bold
-color: $fpm.color.main.text
-
---- container: show-container
-
---- ftd.text: $organization
-if: $url is null
-role: $copy-tight-bold
-color: $fpm.color.main.text
-
---- container: switch-container
-
---- ftd.text: $position
-if: $position is not null
-role: $fpm.type.fine-print
-color: $fpm.color.main.text
-width: fill
-
---- container: switch-container
-
---- ftd.row:
-spacing: 8
-width: fill
-
---- ftd.text: $startDate
-if: $startDate is not null
-role: $fpm.type.fine-print
-white-space: nowrap
-
---- ftd.text: \\~
-if: $endDate is not null
-role: $fpm.type.fine-print
-
---- ftd.text: $endDate
-if: $endDate is not null
-role: $fpm.type.fine-print
-white-space: nowrap
-
---- container: ftd.main
-
---- ftd.column:
+--- volunteer-card-resume-mobile: $organization
 if: $is-mobile
+url: $url
+position: $position
+summary: $summary
+highlights: $highlights
+startDate: $startDate
+endDate: $endDate
+
+
+
+
+
+
+
+
+
+
+-- ftd.column volunteer-card-resume-desktop:
+optional caption organization:
+optional string position:
+optional string url:
+optional string startDate:
+optional string endDate:
+optional string summary:
+optional string highlights:
+color: $fpm.color.main.text
 width: fill
-id: switch-container
-spacing: 8
+spacing: 12
+border-bottom: 1
+border-style: dashed
+border-color: $fpm.color.main.border-strong
+margin-bottom: $fpm.space.space-6
+padding-bottom: $fpm.space.space-6
 
 --- ftd.row:
 width: fill
+id: switch-container
+
+--- ftd.row:
+width: fill
+if: $organization is not null
 id: show-container
+
+--- ftd.text: $organization
+if: $url is null
+role: $copy-tight-bold
+color: $bright-grey
+
+--- container: show-container
 
 --- ftd.text: $organization
 if: $url is not null
 link: $url
 role: $copy-tight-bold
-color: $fpm.color.main.text
+color: $bright-grey
 
---- container: show-container
-
---- ftd.text: $organization
-if: $url is null
-role: $copy-tight-bold
-color: $fpm.color.main.text
+--- container: switch-container
 
 --- ftd.text: $position
 if: $position is not null
 role: $fpm.type.fine-print
-color: $fpm.color.main.text
+color: $bright-grey
+width: fill
 
 --- container: switch-container
 
 --- ftd.row:
 spacing: 8
+width: fill
 
 --- ftd.text: $startDate
 if: $startDate is not null
 role: $fpm.type.fine-print
+color: $fpm.color.main.background.step-2
 
---- ftd.text: \\~
+--- ftd.text: ~
 if: $endDate is not null
 role: $fpm.type.fine-print
+color: $fpm.color.main.background.step-2
 
 --- ftd.text: $endDate
 if: $endDate is not null
 role: $fpm.type.fine-print
+color: $fpm.color.main.background.step-2
 
 --- container: ftd.main
 
 --- ftd.text: $highlights
 if: $highlights is not null
-width:fill
 role: $fpm.type.fine-print
-color: $fpm.color.main.text
+color: $fpm.color.main.background.step-2
 
 --- container: ftd.main
 
@@ -2094,7 +2150,94 @@ color: $fpm.color.main.text
 if: $summary is not null
 width:fill
 role: $fpm.type.fine-print
+color: $bright-grey
+
+
+
+
+
+
+
+
+
+
+-- ftd.column volunteer-card-resume-mobile:
+optional caption organization:
+optional string position:
+optional string url:
+optional string startDate:
+optional string endDate:
+optional string summary:
+optional string highlights:
 color: $fpm.color.main.text
+width: fill
+spacing: 12
+border-bottom: 1
+border-style: dashed
+border-color: $fpm.color.main.border-strong
+margin-bottom: $fpm.space.space-6
+padding-bottom: $fpm.space.space-6
+
+--- ftd.row:
+width: fill
+if: $organization is not null
+id: show-container
+
+--- ftd.text: $organization
+if: $url is null
+role: $copy-tight-bold
+color: $bright-grey
+
+--- container: show-container
+
+--- ftd.text: $organization
+if: $url is not null
+link: $url
+role: $copy-tight-bold
+color: $bright-grey
+
+--- container: ftd.main
+
+--- ftd.row:
+spacing: 8
+
+--- ftd.text: $startDate
+if: $startDate is not null
+role: $fpm.type.fine-print
+color: $fpm.color.main.background.step-2
+
+--- ftd.text: ~
+if: $endDate is not null
+role: $fpm.type.fine-print
+color: $fpm.color.main.background.step-2
+
+--- ftd.text: $endDate
+if: $endDate is not null
+role: $fpm.type.fine-print
+color: $fpm.color.main.background.step-2
+
+--- container: ftd.main
+
+--- ftd.text: $position
+if: $position is not null
+role: $fpm.type.fine-print
+color: $bright-grey
+
+--- container: ftd.main
+
+--- ftd.text: $highlights
+if: $highlights is not null
+role: $fpm.type.fine-print
+color: $fpm.color.main.background.step-2
+
+--- container: ftd.main
+
+--- ftd.text: $summary
+if: $summary is not null
+width:fill
+role: $fpm.type.fine-print
+padding-bottom: $fpm.space.space-2
+color: $bright-grey
 
 
 
@@ -2112,86 +2255,95 @@ optional string url:
 optional string date: 
 width: fill
 spacing: 8
-padding-left if $is-mobile: $fpm.space.space-6
-padding-horizontal if not $is-mobile: $fpm.space.space-7
-margin-bottom: $fpm.space.space-6
+padding-horizontal if not $is-mobile: $fpm.space.space-6
+padding-horizontal if $is-mobile: $fpm.space.space-3
+
+--- ftd.column:
+width: fill
 
 --- ftd.row:
+margin-bottom: $fpm.space.space-6
+border-bottom: 1
+border-style: dashed
+border-color: $fpm.color.main.border-strong
+padding-bottom: $fpm.space.space-6
 width: fill
 if: not $is-mobile
 id: left-side
 
---- ftd.row:
-width: fill
-if: $name is not null
-id: show-container
-
---- ftd.text: $name
-if: $url is  null
-role: $copy-tight-bold
-color: $fpm.color.main.text
-width: fill
-
---- container: show-container
-
---- ftd.text: $name
-if: $url is not null
-link: $url
-role: $copy-tight-bold
-color: $fpm.color.main.text
-width: fill
-
---- container: show-container
-
---- ftd.text: $date
-if: $date is not null
-role: $fpm.type.fine-print
-color: $fpm.color.main.text
-white-space: nowrap
-width: fill
-
---- container: ftd.main
-
 --- ftd.column:
-if:$is-mobile
 width: fill
-id: switch-container
-
---- ftd.row:
-if: $name is not null
-id: show-container
-
---- ftd.text: $name
-if: $url is  null
-role: $copy-tight-bold
-color: $fpm.color.main.text
-width: fill
-
---- container: show-container
-
---- ftd.text: $name
-if: $url is not null
-link: $url
-role: $copy-tight-bold
-color: $fpm.color.main.text
-width: fill
-
---- container: switch-container
-
---- ftd.text: $date
-if: $date is not null
-role: $fpm.type.fine-print
-color: $fpm.color.main.text
-width: fill
-
---- container: ftd.main
 
 --- ftd.text: $issuer
 if: $issuer is not null
 role: $fpm.type.fine-print
 color: $fpm.color.main.text
 
+--- ftd.row:
+width: fill
+if: $name is not null
+id: show-container
 
+--- ftd.text: $name
+if: $url is not null
+link: $url
+role: $copy-tight-bold
+color: $bright-grey
+width: fill
+margin-top: $fpm.space.space-3
+
+--- container: show-container
+
+--- ftd.text: $date
+if: $date is not null
+role: $fpm.type.fine-print
+color: $fpm.color.main.background.step-2
+white-space: nowrap
+width: fill
+margin-top: $fpm.space.space-3
+
+--- container: ftd.main
+
+--- ftd.column:
+width: fill
+if: $is-mobile
+id: left-side
+margin-bottom: $fpm.space.space-6
+border-bottom: 1
+border-style: dashed
+border-color: $fpm.color.main.border-strong
+padding-bottom: $fpm.space.space-6
+
+--- ftd.column:
+width: fill
+
+--- ftd.text: $issuer
+if: $issuer is not null
+role: $fpm.type.fine-print
+color: $fpm.color.main.text
+
+--- ftd.row:
+width: fill
+if: $name is not null
+id: show-container
+
+--- ftd.text: $name
+if: $url is not null
+link: $url
+role: $copy-tight-bold
+color: $bright-grey
+width: fill
+margin-top: $fpm.space.space-3
+
+--- container: show-container
+
+--- ftd.text: $date
+if: $date is not null
+role: $fpm.type.fine-print
+color: $fpm.color.main.background.step-2
+white-space: nowrap
+width: fill
+margin-top: $fpm.space.space-3
 
 
 
@@ -2205,61 +2357,109 @@ optional caption title:
 optional string date:
 optional string awarder:
 optional string summary:
-spacing: 8
 width: fill
-padding-left if $is-mobile: $fpm.space.space-6
-padding-horizontal if not $is-mobile: $fpm.space.space-7
-margin-bottom: $fpm.space.space-6
+spacing: 8
+padding-horizontal if not $is-mobile: $fpm.space.space-6
+padding-horizontal if $is-mobile: $fpm.space.space-3
+
+--- ftd.column:
+width: fill
 
 --- ftd.row:
+margin-bottom: $fpm.space.space-6
+border-bottom: 1
+border-style: dashed
+border-color: $fpm.color.main.border-strong
+padding-bottom: $fpm.space.space-6
+width: fill
 if: not $is-mobile
+id: left-side
+
+--- ftd.column:
+width: fill
+id: parent
+
+--- ftd.text: $awarder
+if: $awarder is not null
+role: $fpm.type.fine-print
+color: $fpm.color.main.text
+
+--- ftd.row:
+if: $title is not null
 width: fill
 id: show-container
 
 --- ftd.text: $title
-if: $title is not null
-color: $fpm.color.main.text
 role: $copy-tight-bold
+color: $bright-grey
 width: fill
+margin-top: $fpm.space.space-3
 
 --- container: show-container
 
 --- ftd.text: $date
 if: $date is not null
-color: $fpm.color.main.text
 role: $fpm.type.fine-print
-padding-top: 4
-width: fill
+color: $fpm.color.main.background.step-2
 white-space: nowrap
+width: fill
+margin-top: $fpm.space.space-3
+
+--- container: parent
+
+--- ftd.text: $summary
+if: $summary is not null
+role: $fpm.type.fine-print
+color: $fpm.color.main.background.step-2
+margin-top: $fpm.space.space-2
 
 --- container: ftd.main
 
 --- ftd.column:
+width: fill
 if: $is-mobile
-spacing: 8
+id: left-side
+margin-bottom: $fpm.space.space-6
+border-bottom: 1
+border-style: dashed
+border-color: $fpm.color.main.border-strong
+padding-bottom: $fpm.space.space-6
+
+--- ftd.column:
+width: fill
+id: parent
+
+--- ftd.text: $awarder
+if: $awarder is not null
+role: $fpm.type.fine-print
+color: $fpm.color.main.text
+
+--- ftd.row:
+width: fill
+if: $title is not null
 id: show-container
 
 --- ftd.text: $title
-if: $title is not null
-color: $fpm.color.main.text
-role: $fpm.type.fine-print
+role: $copy-tight-bold
+color: $bright-grey
+width: fill
+margin-top: $fpm.space.space-3
 
 --- container: show-container
 
 --- ftd.text: $date
 if: $date is not null
-color: $fpm.color.main.text
 role: $fpm.type.fine-print
---- container: ftd.main
+color: $fpm.color.main.background.step-2
+white-space: nowrap
+width: fill
+margin-top: $fpm.space.space-3
 
---- ftd.text: $awarder
-if: $awarder is not null
-color: $fpm.color.main.text
-role: $fpm.type.fine-print
-
---- container: ftd.main
+--- container: parent
 
 --- ftd.text: $summary
 if: $summary is not null
-color: $fpm.color.main.text
 role: $fpm.type.fine-print
+color: $fpm.color.main.background.step-2
+margin-top: $fpm.space.space-2
+
