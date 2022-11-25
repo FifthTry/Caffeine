@@ -2,7 +2,7 @@
 
 -- fpm.package: fifthtry.github.io/caffeine-resume
 zip: github.com/fifthtry/caffeine-resume/archive/refs/heads/main.zip
-base: https://raw.githubusercontent.com/fifthtry/caffeine-resume/main
+download-base-url: https://raw.githubusercontent.com/fifthtry/caffeine-resume/main
 
 -- fpm.dependency: fifthtry.github.io/doc-site as ds
 -- fpm.dependency: fifthtry.github.io/resume
