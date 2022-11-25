@@ -1,15 +1,15 @@
 -- import: fpm
 
--- fpm.package: fifthtry.github.io/resume-caffeine
-zip: github.com/fifthtry/resume-caffeine/archive/refs/heads/main.zip
-base: https://raw.githubusercontent.com/fifthtry/resume-caffein/main
+-- fpm.package: fifthtry.github.io/caffeine-resume
+zip: github.com/fifthtry/caffeine-resume/archive/refs/heads/main.zip
+base: https://raw.githubusercontent.com/fifthtry/caffeine-resume/main
 
 -- fpm.dependency: fifthtry.github.io/doc-site as ds
 -- fpm.dependency: fifthtry.github.io/resume
 
 -- fpm.auto-import: ds
 -- fpm.auto-import: fpm
--- fpm.auto-import: fifthtry.github.io/resume-caffeine/FPM/config
+-- fpm.auto-import: fifthtry.github.io/caffeine-resume/FPM/config
 
 -- fpm.sitemap:
 
