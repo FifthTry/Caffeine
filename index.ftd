@@ -1272,7 +1272,6 @@ if: $is-mobile
 position: $position
 location: $location
 url: $url
-name: $name
 startDate: $startDate
 endDate: $endDate
 highlights: $highlights
@@ -1850,7 +1849,6 @@ color: $fpm.color.main.background.step-2
 --- ftd.text: $keyword
 if: $keyword is not null
 role: $fpm.type.fine-print
-color: $fpm.color.main.text
 color: $fpm.color.main.background.step-2
 
 --- container: ftd.main
