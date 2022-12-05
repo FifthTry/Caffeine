@@ -1040,6 +1040,7 @@ top: -3
 width: percent 90
 role: $font-12
 color: $fpm.color.main.text
+white-space: nowrap
 
 --- container: ftd.main
 
@@ -1062,6 +1063,7 @@ width: percent 75
 role: $font-12
 color: $fpm.color.main.text
 align: center
+white-space: nowrap
 
 --- container: ftd.main
 
@@ -1083,6 +1085,7 @@ top: -3
 width: percent 50
 role: $font-12
 color: $fpm.color.main.text
+white-space: nowrap
 
 --- container: ftd.main
 
@@ -1098,12 +1101,13 @@ spacing: 4
 
 --- ftd.text: 75%
 anchor: parent
-left: 60
+left: 62
 left if $is-mobile: 95
 top: -3
 width: percent 25
 role: $font-12
 color: $fpm.color.main.text
+white-space: nowrap
 
 --- container: ftd.main
 
@@ -1122,7 +1126,7 @@ right: 0
 top: -3
 role: $font-12
 color: $fpm.color.main.background.step-1
-
+white-space: nowrap
 
 
 
