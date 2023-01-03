@@ -354,7 +354,7 @@ min-height: percent 100
 
 --- ftd.column:
 id: left-side
-width: percent 27
+width: calc 25% - 6px
 height: calc 100% - 2px
 min-height: percent 100
 background-color: $fpm.color.main.border
