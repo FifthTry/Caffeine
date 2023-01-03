@@ -981,7 +981,6 @@ $loop$: $keyword as $obj
 
 
 
-
 -- ftd.row keyword-card:
 optional caption name:
 optional string level:
