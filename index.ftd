@@ -1,5 +1,6 @@
 -- import: fifthtry.github.io/resume/sample as s
 -- import: fifthtry.github.io/resume as res
+-- import: fifthtry.github.io/caffeine-resume/assets
 -- boolean is-mobile: false
 
 -- is-mobile: true
@@ -76,8 +77,6 @@ resume: $resume
 
 
 -- ftd.column show-resume:
-margin-top: $fpm.space.space-4
-margin-bottom: $fpm.space.space-4
 width: fill
 align: center
 max-width: 1200
@@ -186,14 +185,17 @@ height: auto
 --- ftd.column:
 if: $summary is not null
 width: fill
-margin-top: $fpm.space.space-4
-margin-bottom: $fpm.space.space-4
+margin-top: $fpm.space.space-6
+margin-bottom: $fpm.space.space-6
+
+--- data-card: ABOUT ME
 
 --- ftd.text:
 text: $summary
 role: $fpm.type.fine-print
 color: $fpm.color.main.text-strong
-
+text-align: left
+width: fill
 
 
 
@@ -276,9 +278,7 @@ if: $title is not null
 role: $fpm.type.heading-hero
 color: $fpm.color.main.text-strong
 width: fill
-margin-top: -12
-
-
+padding-left: 24
 
 
 
@@ -295,6 +295,18 @@ string label:
 width: fill
 spacing: 12
 
+
+
+
+--- ftd.text: $title
+role: $fpm.type.heading-small
+color: $fpm.color.main.text-strong
+width: fill
+text-align: center
+
+--- container: ftd.main
+
+
 --- ftd.row:
 background-color: $fpm.color.main.background.base
 padding-vertical: $fpm.space.space-3
@@ -305,20 +317,7 @@ text: $label
 role: $fpm.type.fine-print
 color: $fpm.color.main.text-strong
 text-align: center
-padding-left: $fpm.space.space-6
 width: fill
-
---- container: ftd.main
-
---- ftd.text: $title
-role: $fpm.type.heading-small
-color: $fpm.color.main.text-strong
-width: fill
-text-align: center
-
-
-
-
 
 
 
@@ -824,11 +823,11 @@ id: image-container
 spacing: 24
 margin-bottom: $fpm.space.space-2
 
---- ftd.text: 📍
-color: $fpm.color.main.text
-role: $fpm.type.fine-print
-width: 30
-min-width: 30
+--- ftd.image: 
+src: $assets.files.static.address.svg
+width: 24
+height: 24
+margin-right: 16
 
 --- container: image-container
 
@@ -883,16 +882,16 @@ margin-left: $fpm.space.space-2
 --- container: ftd.main
 
 --- image-text: $candidate-email-address
-icon: 📩
+icon: $assets.files.static.mail.svg
 
 --- image-text: $candidate-phone
-icon: 📞
+icon: $assets.files.static.phone-call.svg
 
 --- image-text: $maritalStatus
-icon: 👨‍👧
+icon: $assets.files.static.status.svg
 
 --- image-text: $dateOfBirth
-icon: 🗓
+icon: $assets.files.static.dob.svg
 
 
 
@@ -904,16 +903,16 @@ icon: 🗓
 
 
 -- ftd.row image-text:
-string icon:
+ftd.image-src icon:
 optional caption title:
 spacing: 24
 width: fill
 margin-bottom: $fpm.space.space-2
 
---- ftd.text: $icon
-color: $bright-grey
-role: $fpm.type.fine-print
-width: 30
+--- ftd.image:
+src: $icon
+width: 16
+margin-right: 16
 
 --- ftd.text: $title
 if: $title is not null
@@ -952,14 +951,25 @@ border-color: $fpm.color.main.background.step-2
 optional caption name:
 res.keyword list keyword:
 width: fill
-margin-top: $fpm.space.space-3
+
+--- ftd.row:
+width: fill
+if: $name is not null
+margin-bottom: $fpm.space.space-6
 
 --- ftd.text: $name
-if: $name is not null
-width: fill
 role: $fpm.type.fine-print
 color: $fpm.color.main.text
-margin-bottom: $fpm.space.space-3
+text-transform: uppercase
+
+
+--- ftd.text: :
+role: $fpm.type.fine-print
+color: $fpm.color.main.text
+
+
+
+--- container: ftd.main
 
 --- ftd.column:
 if: $keyword is not empty
@@ -985,11 +995,12 @@ $loop$: $keyword as $obj
 optional caption name:
 optional string level:
 width: fill
+margin-bottom: 8
 
 --- ftd.text: $name
 if: $name is not null
 width: fill
-width if $is-mobile: percent 40
+width if $is-mobile: percent 60
 role: $font-12
 color: $bright-grey
 align: center
@@ -1032,7 +1043,6 @@ spacing: 4
 --- ftd.text: 10%
 anchor: parent
 left: 1
-left if $is-mobile: 20
 top: -3
 width: percent 90
 role: $font-12
@@ -1055,7 +1065,6 @@ spacing: 4
 anchor: parent
 top: -3
 left: 1
-left if $is-mobile: 45
 width: percent 75
 role: $font-12
 color: $fpm.color.main.background.step-1
@@ -1077,7 +1086,6 @@ spacing: 4
 --- ftd.text: 50%
 anchor: parent
 left: 1
-left if $is-mobile: 75
 top: -3
 width: percent 50
 role: $font-12
@@ -1099,7 +1107,6 @@ spacing: 4
 --- ftd.text: 75%
 anchor: parent
 left: 1
-left if $is-mobile: 95
 top: -3
 width: percent 25
 role: $font-12
@@ -1192,7 +1199,7 @@ color: $fpm.color.main.text
 --- ftd.text: $courses
 if: $courses is not null
 role: $fpm.type.fine-print
-color: $fpm.color.main.background.step-2
+color: $fpm.color.main.border-strong
 
 --- container: education-container
 
@@ -1202,12 +1209,12 @@ if: $score is not null
 
 --- ftd.text: CGPA:
 role: $fpm.type.fine-print
-color: $fpm.color.main.background.step-2
+color: $fpm.color.main.border-strong
 
 --- ftd.text: $score
 if: $score is not null
 role: $fpm.type.fine-print
-color: $fpm.color.main.background.step-2
+color: $fpm.color.main.border-strong
 
 --- container: ftd.main
 
@@ -1221,18 +1228,18 @@ spacing: 4
 --- ftd.text: $startDate
 if: $startDate is not null
 role: $font-12
-color: $fpm.color.main.background.step-2
+color: $fpm.color.main.border-strong
 white-space: nowrap
 
 --- ftd.text: \\~
 if: $endDate is not null
 role: $fpm.type.fine-print
-color: $fpm.color.main.background.step-2
+color: $fpm.color.main.border-strong
 
 --- ftd.text: $endDate
 if: $endDate is not null
 role: $font-12
-color: $fpm.color.main.background.step-2
+color: $fpm.color.main.border-strong
 white-space: nowrap
 
 
@@ -1538,7 +1545,7 @@ optional string company:
 optional string reference:
 width: fill
 color: $fpm.color.main.text
-spacing: 8
+spacing: 12
 border-bottom: 1
 border-style: dashed
 border-color: $fpm.color.main.border-strong
@@ -1992,11 +1999,11 @@ optional caption network:
 optional string username:
 optional string url:
 width: fill
-margin-bottom: $fpm.space.space-4
+margin-bottom: $fpm.space.space-3
 
 --- ftd.row:
 width: fill
-width if $is-mobile: percent 40
+width if $is-mobile: percent 60
 
 --- ftd.text: $network
 if: $network is not null
@@ -2041,11 +2048,11 @@ color: $bright-grey
 optional caption name:
 optional string keyword:
 width: fill
-margin-bottom: $fpm.space.space-4
+margin-bottom: $fpm.space.space-3
 
 --- ftd.row:
 width: fill
-width if $is-mobile: percent 40
+width if $is-mobile: percent 60
 
 --- ftd.text: $name
 if: $name is not null
@@ -2387,7 +2394,6 @@ if: $date is not null
 role: $fpm.type.fine-print
 color: $fpm.color.main.background.step-2
 white-space: nowrap
-width: fill
 margin-top: $fpm.space.space-3
 
 
@@ -2497,7 +2503,6 @@ if: $date is not null
 role: $fpm.type.fine-print
 color: $fpm.color.main.background.step-2
 white-space: nowrap
-width: fill
 margin-top: $fpm.space.space-3
 
 --- container: parent
