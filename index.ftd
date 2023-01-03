@@ -7,7 +7,7 @@ if: $ftd.device == mobile
 
 -- ftd.font-size font-12-desktop:
 line-height: 18
-size: 12
+size: 11
 letter-spacing: 0
 
 -- ftd.type font-12: $fpm.font-display
@@ -134,18 +134,18 @@ width: fill
 
 --- ftd.row:
 if: $image is not null
-width: calc 25% + 90px
+width: calc 25%
 
 --- ftd.image:
 src: $image
 width: fill
-height: auto
+height: fill
 
 --- container: ftd.main
 
 --- ftd.column:
 if: $summary is not null
-width: fill
+width: calc 75%
 margin-top: $fpm.space.space-4
 margin-bottom: $fpm.space.space-4
 
@@ -354,7 +354,7 @@ min-height: percent 100
 
 --- ftd.column:
 id: left-side
-width: calc 25% - 6px
+width: calc 25% 
 height: calc 100% - 2px
 min-height: percent 100
 background-color: $fpm.color.main.border
@@ -957,7 +957,7 @@ margin-top: $fpm.space.space-3
 --- ftd.text: $name
 if: $name is not null
 width: fill
-role: $font-12
+role: $fpm.type.fine-print
 color: $fpm.color.main.text
 margin-bottom: $fpm.space.space-3
 
@@ -993,13 +993,14 @@ width: fill
 width if $is-mobile: percent 40
 role: $font-12
 color: $bright-grey
+align: center
 
 --- container: ftd.main
 
 --- ftd.row:
 width: percent 70
 width if $is-mobile: percent 40
-align: left
+align: center
 
 --- progress-bar: $level
 
@@ -1031,12 +1032,12 @@ spacing: 4
 
 --- ftd.text: 10%
 anchor: parent
-left: 15
+left: 1
 left if $is-mobile: 20
 top: -3
 width: percent 90
 role: $font-12
-color: $fpm.color.main.text
+color:  $fpm.color.main.background.step-1
 white-space: nowrap
 
 --- container: ftd.main
@@ -1054,11 +1055,11 @@ spacing: 4
 --- ftd.text: 25%
 anchor: parent
 top: -3
-left: 30
+left: 1
 left if $is-mobile: 45
 width: percent 75
 role: $font-12
-color: $fpm.color.main.text
+color: $fpm.color.main.background.step-1
 align: center
 white-space: nowrap
 
@@ -1076,12 +1077,12 @@ spacing: 4
 
 --- ftd.text: 50%
 anchor: parent
-left: 55
+left: 1
 left if $is-mobile: 75
 top: -3
 width: percent 50
 role: $font-12
-color: $fpm.color.main.text
+color: $fpm.color.main.background.step-1
 white-space: nowrap
 
 --- container: ftd.main
@@ -1098,12 +1099,12 @@ spacing: 4
 
 --- ftd.text: 75%
 anchor: parent
-left: 62
+left: 1
 left if $is-mobile: 95
 top: -3
 width: percent 25
 role: $font-12
-color: $fpm.color.main.text
+color: $fpm.color.main.background.step-1
 white-space: nowrap
 
 --- container: ftd.main
@@ -1119,7 +1120,7 @@ spacing: 4
 
 --- ftd.text: 100%
 anchor: parent
-right: 0
+left: 1
 top: -3
 role: $font-12
 color: $fpm.color.main.background.step-1
