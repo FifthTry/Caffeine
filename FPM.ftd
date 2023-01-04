@@ -16,6 +16,8 @@ download-base-url: https://raw.githubusercontent.com/fifthtry/caffeine-resume/ma
 
 # Home: /index.html
 
+# How Tos: https://fifthtry.github.io/resume/
+
 # With-toc: /ds-sample/
 - Sample Toc Item: /ds-sample/
 /- Howto: /-/fifthtry.github.io/resume/how-to/
