@@ -143,7 +143,7 @@ margin-bottom: $fpm.space.space-4
 
 --- ftd.text:
 text: $summary
-role: $fpm.type.fine-print
+role: $fpm.type.copy-tight
 color: $fpm.color.main.text-strong
 padding-top: $fpm.space.space-4
 padding-horizontal: $fpm.space.space-6
@@ -982,7 +982,7 @@ $loop$: $keyword as $obj
 optional caption name:
 optional string level:
 width: fill
-margin-bottom: 8
+margin-bottom: $fpm.space.space-4
 
 --- ftd.text: $name
 if: $name is not null
@@ -1138,7 +1138,7 @@ border-color: $fpm.color.main.border-strong
 --- ftd.column:
 width: fill
 id: education-container
-spacing: 8
+spacing: 12
 
 --- ftd.column:
 if: $institution is not null
@@ -1429,6 +1429,7 @@ if: $highlights is not null
 width:fill
 role: $fpm.type.fine-print
 color: $fpm.color.main.text
+padding-top: $fpm.space.space-2
 
 --- container: ftd.main
 
@@ -1437,6 +1438,7 @@ if: $summary is not null
 width:fill
 role: $fpm.type.fine-print
 color: $bright-grey
+padding-top: $fpm.space.space-2
 
 
 
@@ -1852,6 +1854,7 @@ if: $description is not null
 width:fill
 role: $fpm.type.fine-print
 color: $bright-grey
+padding-top: $fpm.space.space-1
 
 
 
@@ -1963,7 +1966,7 @@ width:fill
 role: $fpm.type.fine-print
 padding-bottom: $fpm.space.space-2
 color: $bright-grey
-
+padding-top: $fpm.space.space-1
 
 
 
@@ -1978,7 +1981,7 @@ optional caption network:
 optional string username:
 optional string url:
 width: fill
-margin-bottom: $fpm.space.space-3
+margin-bottom: $fpm.space.space-4
 
 --- ftd.row:
 width: fill
@@ -2027,7 +2030,7 @@ color: $bright-grey
 optional caption name:
 optional string keyword:
 width: fill
-margin-bottom: $fpm.space.space-3
+margin-bottom: $fpm.space.space-4
 
 --- ftd.row:
 width: fill
