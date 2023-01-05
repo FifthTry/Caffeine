@@ -346,7 +346,7 @@ id: left-side
 width: calc 25% 
 height: calc 100% - 2px
 min-height: percent 100
-background-color: $fpm.color.main.border
+background-color: $fpm.color.main.background.overlay
 
 --- ftd.column:
 width: fill
