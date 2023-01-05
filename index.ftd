@@ -281,14 +281,14 @@ padding-left: 24
 
 -- ftd.column profile-card-mobile:
 background-color: $fpm.color.main.background.step-2
-padding-vertical: $fpm.space.space-6
+padding-vertical: $fpm.space.space-3
 caption title:
 string label:
 width: fill
 spacing: 12
 
 --- ftd.text: $title
-role: $fpm.type.heading-small
+role: $fpm.type.heading-medium
 color: $fpm.color.main.text-strong
 width: fill
 text-align: center
@@ -302,7 +302,7 @@ width: fill
 
 --- ftd.text: 
 text: $label
-role: $fpm.type.fine-print
+role: $fpm.type.copy-large
 color: $fpm.color.main.text-strong
 text-align: center
 width: fill
