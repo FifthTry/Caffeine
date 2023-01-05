@@ -255,7 +255,7 @@ align: center
 
 --- ftd.text: $label
 if:$label is not null
-role: $fpm.type.copy-tight
+role: $fpm.type.heading-small
 color: $fpm.color.main.text-strong
 text-align: center
 width: fill
