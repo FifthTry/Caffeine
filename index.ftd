@@ -952,12 +952,9 @@ role: $fpm.type.fine-print
 color: $fpm.color.main.text
 text-transform: uppercase
 
-
 --- ftd.text: :
 role: $fpm.type.fine-print
 color: $fpm.color.main.text
-
-
 
 --- container: ftd.main
 
@@ -1022,9 +1019,7 @@ border-color: $fpm.color.main.text
 
 --- ftd.row:
 if: $level == ovice
-min-height: 12
-margin-top: -1
-margin-bottom: -1
+min-height: 14
 margin-left: -1
 width: percent 10
 background-color:  $fpm.color.main.text
@@ -1033,7 +1028,7 @@ spacing: 4
 --- ftd.text: 10%
 anchor: parent
 left: 1
-top: -3
+top: -1
 width: percent 90
 role: $fpm.type.fine-print
 color:  $fpm.color.main.background.step-1
@@ -1043,17 +1038,15 @@ white-space: nowrap
 
 --- ftd.row:
 if: $level == beginner
-min-height: 12
+min-height: 14
 width: percent 25
-margin-top: -1
-margin-bottom: -1
 margin-left: -1
 background-color: $fpm.color.main.text
 spacing: 4
 
 --- ftd.text: 25%
 anchor: parent
-top: -3
+top: -1
 left: 1
 width: percent 75
 role: $fpm.type.fine-print
@@ -1065,10 +1058,8 @@ white-space: nowrap
 
 --- ftd.row:
 if: $level == advance
-min-height: 12
+min-height: 14
 width: percent 50
-margin-top: -1
-margin-bottom: -1
 margin-left: -1
 background-color: $fpm.color.main.text
 spacing: 4
@@ -1076,7 +1067,7 @@ spacing: 4
 --- ftd.text: 50%
 anchor: parent
 left: 1
-top: -3
+top: -1
 width: percent 50
 role: $fpm.type.fine-print
 color: $fpm.color.main.background.step-1
@@ -1086,10 +1077,8 @@ white-space: nowrap
 
 --- ftd.row:
 if: $level == competent
-min-height: 12
+min-height: 14
 width: percent 75
-margin-top: -1
-margin-bottom: -1
 margin-left: -1
 background-color: $fpm.color.main.text
 spacing: 4
@@ -1097,7 +1086,7 @@ spacing: 4
 --- ftd.text: 75%
 anchor: parent
 left: 1
-top: -3
+top: -1
 width: percent 25
 role: $fpm.type.fine-print
 color: $fpm.color.main.background.step-1
@@ -1108,16 +1097,14 @@ white-space: nowrap
 --- ftd.row:
 if: $level == expert
 width: fill
-min-height: 12
-margin-top: -1
-margin-bottom: -1
+min-height: 14
 background-color: $fpm.color.main.text
 spacing: 4
 
 --- ftd.text: 100%
 anchor: parent
 left: 1
-top: -3
+top: -1
 role: $fpm.type.fine-print
 color: $fpm.color.main.background.step-1
 white-space: nowrap
