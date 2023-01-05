@@ -572,7 +572,7 @@ id: left-side
 width: fill
 height: fill
 min-height: percent 100
-background-color: $fpm.color.main.border
+background-color: $fpm.color.main.background.overlay
 
 --- ftd.column:
 width: fill
@@ -627,7 +627,6 @@ $loop$: $resume.profile as $obj
 --- ftd.column:
 if: $resume.interest is not empty
 width: fill
-background-color: $fpm.color.main.border
 padding-vertical: $fpm.space.space-6
 padding-horizontal: $fpm.space.space-6
 
