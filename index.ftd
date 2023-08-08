@@ -552,7 +552,7 @@ margin-bottom.px: 24
 padding-bottom.px: 4
 border-bottom-width.px: 2
 border-color: $inherited.colors.background.step-2
-role: $inherited.types.heading-tiny
+role: $inherited.types.copy-small
 
 -- end: heading
 
@@ -926,6 +926,7 @@ border-color: $inherited.colors.border-strong
 padding-bottom.px: 24
 role: $inherited.types.copy-small
 color: $inherited.colors.text
+spacing.fixed.px: 12
 
 -- ftd.row:
 width: fill-container
@@ -953,7 +954,7 @@ width: fill-container
 -- ftd.text: $work-section.startDate
 if: { work-section.startDate != NULL }
 
--- ftd.text: \\~
+-- ftd.text: \~
 if: { work-section.endDate != NULL }
 padding-horizontal.px: 4
 
@@ -966,13 +967,10 @@ if: { work-section.endDate != NULL }
 
 -- ftd.text: $work-section.highlights
 if: { work-section.highlights != NULL }
-padding-top.px: 8
 
 -- ftd.text: $work-section.summary
 if: { work-section.summary != NULL }
 color: $bright-grey
-padding-top.px: 8
-
 
 -- end: ftd.column
 
@@ -1332,7 +1330,7 @@ optional string url:
 
 -- ftd.column:
 width: fill-container
-spacing.fixed.px: 24
+spacing.fixed.px: 12
 role: $inherited.types.copy-small
 color: $inherited.colors.text
 
@@ -1391,6 +1389,7 @@ border-color: $inherited.colors.border-strong
 padding-bottom.px: 24
 role: $inherited.types.copy-small
 color: $inherited.colors.text
+spacing.fixed.px: 12
 
 -- ftd.row:
 width: fill-container
@@ -1449,7 +1448,7 @@ optional string summary:
 
 -- ftd.column:
 width: fill-container
-spacing.fixed.px: 8
+spacing.fixed.px: 12
 role: $inherited.types.copy-small
 color: $inherited.colors.text
 margin-bottom.px: 24
@@ -1463,7 +1462,6 @@ if: {acheivement-section.awarder != NULL }
 
 -- ftd.row:
 width: fill-container
-margin-top.px: 12
 
 -- ftd.text: $acheivement-section.title
 if: { acheivement-section.title != NULL }
@@ -1479,7 +1477,6 @@ width: fill-container
 
 -- ftd.text: $acheivement-section.summary
 if: { acheivement-section.summary != NULL }
-margin-top.px: 8
 
 -- end: ftd.column
 
