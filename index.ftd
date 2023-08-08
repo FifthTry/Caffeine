@@ -23,6 +23,8 @@ resume: $s.john-doe
 
 
 
+
+
 -- component full-page:
 res.resume resume:
 
@@ -32,7 +34,6 @@ width: fill-container
 -- show-resume:
 resume: $full-page.resume
 
-
 -- end: ftd.column
 
 -- end: full-page
@@ -40,9 +41,8 @@ resume: $full-page.resume
 
 
 
--- ftd.color bright-grey:
-light: rgba(230, 225, 222, 1)
-dark: rgba(230, 225, 222, 1)
+
+
 
 
 
@@ -88,6 +88,13 @@ height: fill-container
 resume: $about-section.resume
 
 -- end: ftd.desktop
+
+-- ftd.mobile:
+
+-- about-section-mobile:
+resume: $about-section.resume
+
+-- end: ftd.mobile
 
 -- end: ftd.column
 
@@ -306,13 +313,217 @@ $loop$: $about-section-desktop.resume.reference as $obj
 
 -- end: ftd.column
 
-
 -- end: ftd.row
 
 -- end: about-section-desktop
 
 
 
+
+
+
+
+
+
+
+-- component about-section-mobile:
+res.resume resume:
+
+-- ftd.column:
+width: fill-container
+height: fill-container
+background.solid: $inherited.colors.background.step-1
+spacing.fixed.px: 24
+padding-horizontal.px: 24
+padding-vertical.px: 64
+
+
+-- ftd.column:
+width: fill-container
+
+-- heading: CONTACT:
+
+-- contact-section:
+candidate-email-address: $about-section-mobile.resume.basic.email
+candidate-phone: $about-section-mobile.resume.basic.phone
+candidate-address-city: $about-section-mobile.resume.location.city
+candidate-address: $about-section-mobile.resume.location.address
+candidate-address-postalCode: $about-section-mobile.resume.location.postalCode
+candidate-address-region: $about-section-mobile.resume.location.region
+candidate-address-countryCode: $about-section-mobile.resume.location.countryCode
+maritalStatus: $about-section-mobile.resume.basic.maritalStatus
+dateOfBirth: $about-section-mobile.resume.basic.dateOfBirth
+
+-- end: ftd.column
+
+-- ftd.column:
+if: { !ftd.is_empty(about-section-mobile.resume.skill)}
+width: fill-container
+
+-- heading: SKILLS:
+
+-- skill-section:
+name: $obj.name
+keyword: $obj.keywords
+$loop$: $about-section-mobile.resume.skill as $obj
+
+-- end: ftd.column
+
+-- ftd.column:
+if: { !ftd.is_empty(about-section-mobile.resume.profile)}
+width: fill-container
+
+-- heading: SOCIAL:
+
+-- social-section:
+network: $obj.network
+username: $obj.username
+url: $obj.url
+$loop$: $about-section-mobile.resume.profile as $obj
+
+-- end: ftd.column
+
+-- ftd.column:
+if: { !ftd.is_empty(about-section-mobile.resume.interest)}
+width: fill-container
+
+-- heading: INTEREST
+
+-- interest-section:
+name: $obj.name
+keyword: $obj.keyword
+$loop$: $about-section-mobile.resume.interest as $obj
+
+-- end: ftd.column
+
+-- ftd.column:
+if: { !ftd.is_empty(about-section-mobile.resume.education)}
+width: fill-container
+
+-- heading: EDUCATION
+
+-- education-section:
+institution: $obj.institution
+url: $obj.url
+courses: $obj.courses
+area: $obj.area
+studyType: $obj.studyType
+startDate: $obj.startDate
+endDate: $obj.endDate
+score: $obj.score
+$loop$: $about-section-mobile.resume.education as $obj
+
+-- end: ftd.column
+
+-- ftd.column:
+if: { !ftd.is_empty(about-section-mobile.resume.work)}
+width: fill-container
+
+-- data-card: WORK EXPERIENCES
+
+-- work-section:
+name: $obj.name
+position: $obj.position
+location: $obj.location
+url: $obj.url
+startDate: $obj.startDate
+endDate: $obj.endDate
+summary: $obj.summary
+highlights: $obj.highlights
+$loop$: $about-section-mobile.resume.work as $obj
+
+-- end: ftd.column
+
+-- ftd.column:
+if: { !ftd.is_empty(about-section-mobile.resume.project)}
+width: fill-container
+
+-- data-card: PROJECTS
+
+-- project-section:
+name: $obj.name
+url: $obj.url
+description: $obj.description
+startDate: $obj.startDate
+endDate: $obj.endDate
+highlights: $obj.highlights
+role: $obj.role
+keyword: $obj.keyword
+entity: $obj.entity
+type: $obj.type
+$loop$: $about-section-mobile.resume.project as $obj
+
+-- end: ftd.column
+
+-- ftd.column:
+if: { !ftd.is_empty(about-section-mobile.resume.certificate)}
+width: fill-container
+
+-- data-card: CERTIFICATES
+
+-- certificate-section:
+name: $obj.name
+issuer: $obj.issuer
+date: $obj.date
+url: $obj.url
+$loop$: $about-section-mobile.resume.certificate as $obj
+
+-- end: ftd.column
+
+-- ftd.column:
+if: { !ftd.is_empty(about-section-mobile.resume.award)}
+width: fill-container
+
+-- data-card: AWARDS
+
+-- acheivement-section:
+title: $obj.title
+date: $obj.date
+awarder:  $obj.awarder
+summary: $obj.summary
+$loop$: $about-section-mobile.resume.award as $obj
+
+-- end: ftd.column
+
+-- ftd.column:
+if: { !ftd.is_empty(about-section-mobile.resume.volunteer)}
+width: fill-container
+
+-- data-card: VOLUNTEERS
+
+
+-- volunteer-section:
+organization: $obj.organization
+position: $obj.position
+url: $obj.url
+startDate: $obj.startDate
+endDate: $obj.endDate
+highlights: $obj.highlights
+summary: $obj.summary
+$loop$: $about-section-mobile.resume.volunteer as $obj
+
+-- end: ftd.column
+
+-- ftd.column:
+if: { !ftd.is_empty(about-section-mobile.resume.reference)}
+width: fill-container
+
+-- data-card: REFERENCES
+
+-- refrences-section:
+name: $obj.name
+position: $obj.position
+company: $obj.company
+email: $obj.email-id
+phone: $obj.phone-no
+reference: $obj.reference
+$loop$: $about-section-mobile.resume.reference as $obj
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: about-section-mobile
 
 
 
@@ -334,6 +545,14 @@ image: $profile-card.image
 summary: $profile-card.summary
 
 -- end: ftd.desktop
+
+-- ftd.mobile:
+
+-- profile-card-mobile:
+image: $profile-card.image
+summary: $profile-card.summary
+
+-- end: ftd.mobile
 
 -- end: ftd.column
 
@@ -376,13 +595,54 @@ role: $inherited.types.copy-large
 color: $inherited.colors.text-strong
 padding-top.px: 16
 
-
 -- end: ftd.column
 
 -- end: ftd.row
 
 -- end: profile-card-desktop
 
+
+
+
+
+
+
+
+
+
+
+-- component profile-card-mobile:
+optional ftd.image-src image: 
+optional body summary:
+
+-- ftd.column:
+width: fill-container
+
+-- ftd.image:
+if: { profile-card-mobile.image != NULL }
+src: $profile-card-mobile.image
+width: fill-container
+height: fill-container
+
+-- ftd.column:
+if: { profile-card-mobile.summary != NULL }
+width: fill-container
+margin-bottom.px: 16
+padding-horizontal.px:24
+
+-- data-card: ABOUT ME
+
+-- ftd.text:
+text: $profile-card-mobile.summary
+role: $inherited.types.copy-large
+color: $inherited.colors.text-strong
+padding-top.px: 16
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: profile-card-mobile
 
 
 
@@ -401,6 +661,7 @@ padding-bottom.px: 8
 border-color: $inherited.colors.background.step-2
 color: $inherited.colors.text
 margin-top.px: 64
+margin-top.px if { ftd.device == "mobile" }: 24
 role: $inherited.types.heading-tiny
 margin-bottom.px: 24
 
@@ -793,6 +1054,13 @@ label: $profile-title.label
 
 -- end: ftd.desktop
 
+-- ftd.mobile:
+
+-- profile-title-mobile: $profile-title.title
+label: $profile-title.label
+
+-- end: ftd.mobile
+
 -- end: ftd.column
 
 -- end: profile-title
@@ -834,6 +1102,41 @@ padding-left.px: 24
 
 
 
+
+
+
+-- component profile-title-mobile:
+optional caption title:
+optional string label:
+
+-- ftd.column:
+background.solid: $inherited.colors.background.step-2
+padding-vertical.px: 12
+width: fill-container
+align-content: center
+
+-- ftd.text: $profile-title-mobile.label
+if: { profile-title-mobile.label != NULL }
+role: $inherited.types.heading-small
+color: $inherited.colors.text-strong
+text-align: center
+width: fill-container
+padding-left.px: 24
+background.solid: $inherited.colors.background.base
+padding-vertical.px: 12
+
+-- ftd.text: $profile-title-mobile.title
+if: { profile-title-mobile.title != NULL }
+role: $inherited.types.heading-hero
+color: $inherited.colors.text-strong
+width: fill-container
+padding-left.px: 24
+text-align: center
+
+
+-- end: ftd.column
+
+-- end: profile-title-mobile
 
 
 
@@ -932,6 +1235,7 @@ color: $inherited.colors.text
 spacing.fixed.px: 12
 
 -- ftd.row:
+if: { ftd.device != "mobile" }
 width: fill-container
 align-content: center
 
@@ -967,6 +1271,43 @@ if: { work-section.endDate != NULL }
 -- end: ftd.row
 
 -- end: ftd.row
+
+-- ftd.column:
+if: { ftd.device == "mobile" }
+width: fill-container
+spacing.fixed.px: 12
+
+-- ftd.text: $work-section.position
+if: { work-section.position != NULL }
+color: $inherited.colors.text-strong
+width: fill-container
+
+-- ftd.text: $work-section.name
+if: { work-section.name != NULL }
+color: $bright-grey
+width: fill-container
+
+-- ftd.text: $work-section.location
+if: { work-section.location != NULL }
+width: fill-container
+
+-- ftd.row:
+padding-top.px: 2
+width: fill-container
+
+-- ftd.text: $work-section.startDate
+if: { work-section.startDate != NULL }
+
+-- ftd.text: \~
+if: { work-section.endDate != NULL }
+padding-horizontal.px: 4
+
+-- ftd.text: $work-section.endDate
+if: { work-section.endDate != NULL }
+
+-- end: ftd.row
+
+-- end: ftd.column
 
 -- ftd.text: $work-section.highlights
 if: { work-section.highlights != NULL }
@@ -1036,6 +1377,7 @@ role: $inherited.types.copy-small
 color: $inherited.colors.text
 
 -- ftd.row:
+if: { ftd.device != "mobile"}
 width: fill-container
 
 -- ftd.text: $refrences-section.name
@@ -1053,6 +1395,26 @@ margin-left.px: 12
 width: fill-container
 
 -- end: ftd.row
+
+-- ftd.column:
+if: { ftd.device == "mobile"}
+spacing.fixed.px: 12
+
+-- ftd.text: $refrences-section.name
+if: { refrences-section.name != NULL }
+color: $bright-grey
+width: fill-container
+
+-- ftd.text: $refrences-section.position
+if: {refrences-section.position != NULL }
+width: fill-container
+
+-- ftd.text: $refrences-section.company
+if: { refrences-section.company != NULL }
+width: fill-container
+
+-- end: ftd.column
+
 
 -- ftd.row:
 if: { refrences-section.email != NULL }
@@ -1120,6 +1482,7 @@ padding-bottom.px: 24
 role: $inherited.types.copy-small
 
 -- ftd.row:
+if: { ftd.device != "mobile" }
 width: fill-container
 
 -- ftd.text: $project-section.name
@@ -1149,6 +1512,40 @@ if: { project-section.endDate != NULL }
 -- end: ftd.row
 
 -- end: ftd.row
+
+
+-- ftd.column:
+if: { ftd.device == "mobile" }
+width: fill-container
+spacing.fixed.px: 12
+
+-- ftd.text: $project-section.name
+if: { project-section.name != NULL }
+link if {  project-section.url != NULL }: $project-section.url
+color: $bright-grey
+width: fill-container
+
+-- ftd.text: $project-section.role
+if: { project-section.role != NULL }
+color: $bright-grey
+width: fill-container
+
+-- ftd.row:
+spacing.fixed.px: 8
+width: fill-container
+
+-- ftd.text: $project-section.startDate
+if: { project-section.startDate != NULL }
+
+-- ftd.text: ~
+if: { project-section.endDate != NULL }
+
+-- ftd.text: $project-section.endDate
+if: { project-section.endDate != NULL }
+
+-- end: ftd.row
+
+-- end: ftd.column
 
 -- ftd.text:$project-section.type
 if: {project-section.type != NULL }
@@ -1336,16 +1733,17 @@ width: fill-container
 spacing.fixed.px: 12
 role: $inherited.types.copy-small
 color: $inherited.colors.text
-
--- ftd.text: $certificate-section.issuer
-if: { certificate-section.issuer != NULL }
-
--- ftd.row:
 margin-bottom.px: 24
 border-bottom-width.px: 1
 border-style: dashed
 border-color: $inherited.colors.border-strong
 padding-bottom.px: 24
+
+-- ftd.text: $certificate-section.issuer
+if: { certificate-section.issuer != NULL }
+
+-- ftd.row:
+if: { ftd.device !="mobile"}
 width: fill-container
 
 -- ftd.text: $certificate-section.name
@@ -1360,6 +1758,24 @@ white-space: nowrap
 width: fill-container
 
 -- end: ftd.row
+
+-- ftd.column:
+if: { ftd.device == "mobile"}
+spacing.fixed.px: 12
+width: fill-container
+
+-- ftd.text: $certificate-section.name
+if: { certificate-section.name != NULL }
+link if {certificate-section.url != NULL }: $certificate-section.url
+color: $bright-grey
+width: fill-container
+
+-- ftd.text: $certificate-section.date
+if: { certificate-section.date != NULL }
+white-space: nowrap
+width: fill-container
+
+-- end: ftd.column
 
 -- end: ftd.column
 
@@ -1395,6 +1811,7 @@ color: $inherited.colors.text
 spacing.fixed.px: 12
 
 -- ftd.row:
+if: { ftd.device != "mobile" }
 width: fill-container
 
 -- ftd.text: $volunteer-section.organization
@@ -1424,6 +1841,40 @@ if: { volunteer-section.endDate != NULL }
 -- end: ftd.row
 
 -- end: ftd.row
+
+-- ftd.column:
+if: { ftd.device == "mobile"}
+width: fill-container
+spacing.fixed.px: 12
+
+-- ftd.text: $volunteer-section.organization
+if: { volunteer-section.organization != NULL }
+link if { volunteer-section.url != NULL }: $volunteer-section.url
+color: $bright-grey
+width: fill-container
+
+-- ftd.text: $volunteer-section.position
+if: { volunteer-section.position != NULL }
+color: $bright-grey
+width: fill-container
+
+-- ftd.row:
+spacing.fixed.px: 8
+width: fill-container
+
+-- ftd.text: $volunteer-section.startDate
+if: { volunteer-section.startDate != NULL }
+
+-- ftd.text: ~
+if: { volunteer-section.endDate != NULL }
+
+-- ftd.text: $volunteer-section.endDate
+if: { volunteer-section.endDate != NULL }
+
+-- end: ftd.row
+
+-- end: ftd.column
+
 
 -- ftd.text: $volunteer-section.summary
 if:  {volunteer-section.summary != NULL }
@@ -1464,6 +1915,7 @@ padding-bottom.px: 24
 if: {acheivement-section.awarder != NULL }
 
 -- ftd.row:
+if: { ftd.device != "mobile"}
 width: fill-container
 
 -- ftd.text: $acheivement-section.title
@@ -1478,9 +1930,38 @@ width: fill-container
 
 -- end: ftd.row
 
+-- ftd.column:
+if: { ftd.device == "mobile"}
+width: fill-container
+spacing.fixed.px: 12
+
+-- ftd.text: $acheivement-section.title
+if: { acheivement-section.title != NULL }
+color: $bright-grey
+width: fill-container
+
+-- ftd.text: $acheivement-section.date
+if: {acheivement-section.date != NULL }
+white-space: nowrap
+width: fill-container
+
+-- end: ftd.column
+
 -- ftd.text: $acheivement-section.summary
 if: { acheivement-section.summary != NULL }
 
 -- end: ftd.column
 
 -- end: acheivement-section
+
+
+
+
+
+
+
+
+-- ftd.color bright-grey:
+light: rgba(230, 225, 222, 1)
+dark: rgba(230, 225, 222, 1)
+
