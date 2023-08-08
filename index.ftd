@@ -399,7 +399,7 @@ padding-bottom.px: 8
 border-color: $inherited.colors.background.step-2
 color: $inherited.colors.text
 margin-top.px: 64
-margin-top.px if { ftd.device == "mobile" }: 24
+role: $inherited.types.heading-tiny
 margin-bottom.px: 24
 
 -- end: data-card
@@ -552,6 +552,7 @@ margin-bottom.px: 24
 padding-bottom.px: 4
 border-bottom-width.px: 2
 border-color: $inherited.colors.background.step-2
+role: $inherited.types.heading-tiny
 
 -- end: heading
 
