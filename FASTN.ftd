@@ -4,10 +4,13 @@
 download-base-url: https://raw.githubusercontent.com/fifthtry/caffeine-resume/main
 
 -- fastn.dependency: fastn-community.github.io/doc-site as ds
+-- fastn.dependency: fastn-community.github.io/site-doc
+-- fastn.dependency: fastn-community.github.io/code-block
 -- fastn.dependency: fifthtry.github.io/resume
 
 -- fastn.auto-import: ds
 -- fastn.auto-import: fastn
+-- fastn.auto-import: fastn-community.github.io/site-doc
 
 
 
@@ -15,6 +18,9 @@ download-base-url: https://raw.githubusercontent.com/fifthtry/caffeine-resume/ma
 -- fastn.sitemap:
 
 # Home: /index.html
+
+# Doc: components/
+;;skip: true
 
 
 
