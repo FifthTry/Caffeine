@@ -1,0 +1,82 @@
+-- import: fastn-community.github.io/code-block as cb
+-- import: fifthtry.github.io/caffeine-resume
+-- import: fifthtry.github.io/resume/sample as s
+
+
+-- site-doc.doc-home: Reference Info
+site-title: Caffeine-resume
+show-tabs: false
+
+-- site-doc.component-doc: `caffeine-resume`
+package-link: fifthtry.github.io/caffeine-resume
+package-name: fifthtry.github.io/caffeine-resume
+info: `-- caffeine-resume` can be used as resume on your fastn web projects.
+
+-- site-doc.header: How to use
+
+-- cb.code: Add `resume` dependency into your FASTN.ftd
+lang: ftd
+
+\-- fastn.dependency: fifthtry.github.io/resume
+\-- fastn.dependency: fifthtry.github.io/caffeine-resume
+
+-- cb.code: Import `resume` into your `.ftd` file
+lang: ftd
+
+\-- import: fifthtry.github.io/caffeine-resume
+\-- import: fifthtry.github.io/resume as cv
+
+-- cb.code: Write below code to your `.ftd` file
+lang: ftd
+
+\-- cv.resume john-doe:
+
+-- site-doc.header: Resume Reference Info:
+
+-- cb.code: Modify below reference details info with your info:
+lang: ftd
+
+\-- john-doe.reference: Amit Upadhyay
+reference: 
+phone-no: 
+email-id: amitu@fifthtry.com
+position: CEO
+company: FifthTry Pvt Ltd, Banglore
+
+-- site-doc.header: Properties:
+
+Below are details of all properties of this component.
+
+-- site-doc.component-property: `title`
+type: caption (`required`)
+
+It's used to show `title` for the reference sections.
+
+-- site-doc.component-property: `reference`
+type: string (`optional`)
+
+It's used to show `reference` for the reference.
+
+-- site-doc.component-property: `phone-no`
+type: link (`optional`)
+
+It's used to show `phone-no` for the reference.
+
+-- site-doc.component-property: `email-id`
+type: string (`required`)
+
+It's used to show `email-id` for the reference sections.
+
+-- site-doc.component-property: `position`
+type: string (`required`)
+
+It's used to show `position` for the reference sections.
+
+-- site-doc.component-property: `company`
+type: string (`required`)
+
+It's used to show `company` for the reference sections.
+
+-- end: site-doc.component-doc
+
+-- end: site-doc.doc-home

@@ -1,0 +1,106 @@
+-- import: fastn-community.github.io/code-block as cb
+-- import: fifthtry.github.io/caffeine-resume
+-- import: fifthtry.github.io/resume/sample as s
+
+
+-- site-doc.doc-home: Work Info
+site-title: Caffeine-resume
+show-tabs: false
+
+-- site-doc.component-doc: `caffeine-resume`
+package-link: fifthtry.github.io/caffeine-resume
+package-name: fifthtry.github.io/caffeine-resume
+info: `-- caffeine-resume` can be used as resume on your fastn web projects.
+
+-- site-doc.header: How to use
+
+-- cb.code: Add `resume` dependency into your FASTN.ftd
+lang: ftd
+
+\-- fastn.dependency: fifthtry.github.io/resume
+\-- fastn.dependency: fifthtry.github.io/caffeine-resume
+
+-- cb.code: Import `resume` into your `.ftd` file
+lang: ftd
+
+\-- import: fifthtry.github.io/caffeine-resume
+\-- import: fifthtry.github.io/resume as cv
+
+-- cb.code: Write below code to your `.ftd` file
+lang: ftd
+
+\-- cv.resume john-doe:
+
+-- site-doc.header: Resume Work History Info:
+
+-- cb.code: Modify below work history details info with your info:
+lang: ftd
+
+\-- john-doe.work: Vodafone - VOIS
+position: Manager - frontend
+url: /
+startDate: Oct 2016
+endDate: May 2022
+location: Pune
+summary: VOIS, Pune is Vodafone groups development centre. Worked in CP&S department on Vodafone Start, IDGW. Vodafone Start is a web application shows various offers and services Vodafone offers to their customers. Using Vodafone start web login subscribers can subscribe to Vodafone and their partners services. IDGW is a login and authentication platform for all Vodafone subscribers. IDGW: https://offers.vodafone.com/ Vodafone Start: https://www.vodafone.com/
+
+\-- john-doe.work: ITC Infotech
+position: Lead UI Consultant
+url: /
+startDate: Feb, 2016
+endDate: Sep, 2016
+location: Pune
+summary: While in ITC infotech working as consultat for their client site at Vodafone VOIS Pune office, was working on Vodafone Germeny intranet application. 
+highlights: Liking my work in Vodafone. Vodafone appointed me as their payroll employee as Lead Frontend developer in Oct 2016.
+
+\-- john-doe.work: e-Zest Solutions
+position: Technical Lead UI
+url: /
+startDate: Aug, 2015
+endDate: Jan, 2016
+location: Pune
+summary: I was at ecommera client site and was working in frontend department where I worked on Jaeger-UK is one of most popular and known brands in UK and overseas markets, and has worked on revamp of UI and functional changes. http://www.jaeger.co.uk/. Philosophy.com is one of most popular and known brand in USA and overseas markets, worked on revamp of UI and functional changes. http://www.philosophy.com
+highlights: Worked on their client site 
+
+-- site-doc.header: Properties:
+
+Below are details of all properties of this component.
+
+-- site-doc.component-property: `title`
+type: caption (`required`)
+
+It's used to show `title` for the work sections.
+
+-- site-doc.component-property: `position`
+type: string (`required`)
+
+It's used to show `position` for the work.
+
+-- site-doc.component-property: `url`
+type: link (`required`)
+
+It's used to show `url` for the work.
+
+-- site-doc.component-property: `startDate`
+type: string (`required`)
+
+It's used to show `startDate` for the work.
+
+-- site-doc.component-property: `endDate`
+type: string (`required`)
+
+It's used to show `endDate` for the work.
+
+-- site-doc.component-property: `location`
+type: string (`required`)
+
+It's used to show `location` for the work.
+
+-- site-doc.component-property: `summary`
+type: string (`required`)
+
+It's used to show `summary` for the work.
+
+-- end: site-doc.component-doc
+
+-- end: site-doc.doc-home

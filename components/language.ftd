@@ -3,7 +3,7 @@
 -- import: fifthtry.github.io/resume/sample as s
 
 
--- site-doc.doc-home: Documentation
+-- site-doc.doc-home: Languages Info
 site-title: Caffeine-resume
 show-tabs: false
 
@@ -11,14 +11,6 @@ show-tabs: false
 package-link: fifthtry.github.io/caffeine-resume
 package-name: fifthtry.github.io/caffeine-resume
 info: `-- caffeine-resume` can be used as resume on your fastn web projects.
-
--- site-doc.output:
-colors: $ftd.default-colors
-
--- caffeine-resume.show-resume:
-resume: $s.john-doe
-
--- end: site-doc.output
 
 -- site-doc.header: How to use
 
@@ -39,18 +31,33 @@ lang: ftd
 
 \-- cv.resume john-doe:
 
--- site-doc.header: Once you are done with updating all the details just copy below code to your `.ftd` file.
+-- site-doc.header: Resume Language Info:
 
--- cb.code:
+-- cb.code: Modify below language details info with your info:
 lang: ftd
 
-\-- ds.page:
-widthfill: true
+\-- john-doe.language: English
+fluency: expert
 
-\-- caffeine.show-resume:
-resume: $john-doe
+\-- john-doe.language: Hindi
+fluency: beginner
 
-\-- end: ds.page
+\-- john-doe.language: Marathi
+fluency: advance
+
+-- site-doc.header: Properties:
+
+Below are details of all properties of this component.
+
+-- site-doc.component-property: `title`
+type: caption (`required`)
+
+It's used to show `title` for the language sections.
+
+-- site-doc.component-property: `fluency`
+type: string (`required`)
+
+It's used to show `fluency` for the language.
 
 -- end: site-doc.component-doc
 

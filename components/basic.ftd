@@ -1,0 +1,100 @@
+-- import: fastn-community.github.io/code-block as cb
+-- import: fifthtry.github.io/caffeine-resume
+-- import: fifthtry.github.io/resume/sample as s
+
+
+-- site-doc.doc-home: Basic Info
+site-title: Caffeine-resume
+show-tabs: false
+
+-- site-doc.component-doc: `caffeine-resume`
+package-link: fifthtry.github.io/caffeine-resume
+package-name: fifthtry.github.io/caffeine-resume
+info: `-- caffeine-resume` can be used as resume on your fastn web projects.
+
+-- site-doc.header: How to use
+
+-- cb.code: Add `resume` dependency into your FASTN.ftd
+lang: ftd
+
+\-- fastn.dependency: fifthtry.github.io/resume
+\-- fastn.dependency: fifthtry.github.io/caffeine-resume
+
+-- cb.code: Import `resume` into your `.ftd` file
+lang: ftd
+
+\-- import: fifthtry.github.io/caffeine-resume
+\-- import: fifthtry.github.io/resume as cv
+
+-- cb.code: Write below code to your `.ftd` file
+lang: ftd
+
+\-- cv.resume john-doe:
+
+-- site-doc.header: Resume Basic Info:
+
+-- cb.code: Modify below basic info with your info:
+lang: ftd
+
+\-- john-doe.basic: Ganesh S Salunke
+label: Frontend Manager
+email: ganesh.salunke@hotmail.com
+phone: +91 9987915037
+url: https://ganeshsalunke.com
+maritalStatus: Married
+dateOfBirth: 16th Nov 1977
+summary: Courteous and enthusiastic, I am interested in IT and everything in its orbit. I am fascinated by web programming, e.g. developing apps and building websites. Recently joined my friend's startup company as a Senior Frontend Manager. I gained 14 years of experience working in the frontend development area. As this area compliments my interest in frontend. I am keen to gain more experience in the field. In 14 years I worked on jQuery, DoJo JS, Bootstrap, React JS, HTML, CSS. My favorite domain is ecommerce and I worked with known international brands like Allen Solly, Van Heusen, Peter England, Jaeger-UK, philosophy, OneHugeStep, YelloFashion etc.
+image: $assets.files.static.ganesh-profile-picture.jp
+
+-- site-doc.header: Properties:
+
+Below are details of all properties of this component.
+
+-- site-doc.component-property: `title`
+type: caption (`required`)
+
+It's used to show `title` for the basic info sections.
+
+-- site-doc.component-property: `label`
+type: string (`required`)
+
+It's used to show `label` for the basic info.
+
+-- site-doc.component-property: `email`
+type: string (`required`)
+
+It's used to show `email` for the basic info sections.
+
+-- site-doc.component-property: `phone`
+type: string (`required`)
+
+It's used to show `phone` for the basic info sections.
+
+-- site-doc.component-property: `url`
+type: link (`required`)
+
+It's used to show `url` for the basic info sections.
+
+-- site-doc.component-property: `maritalStatus`
+type: string (`required`)
+
+It's used to show `maritalStatus` for the basic info sections.
+
+-- site-doc.component-property: `dateOfBirth`
+type: string (`required`)
+
+It's used to show `dateOfBirth` for the basic info sections.
+
+-- site-doc.component-property: `summary`
+type: string (`required`)
+
+It's used to show `summary` for the basic info sections.
+
+-- site-doc.component-property: `image`
+type: ftd.image-src (`required`)
+
+It's used to show `image` for the basic info sections.
+
+-- end: site-doc.component-doc
+
+-- end: site-doc.doc-home
