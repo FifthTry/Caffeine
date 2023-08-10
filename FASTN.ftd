@@ -19,7 +19,7 @@ download-base-url: https://raw.githubusercontent.com/fifthtry/caffeine-resume/ma
 
 # Home: /index.html
 
-# Doc: components/
+# Docs: components/
 - Awards: components/awards
 - Basic: components/basic
 - Certificate: components/certificate
