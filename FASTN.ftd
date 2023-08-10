@@ -28,6 +28,8 @@ download-base-url: https://raw.githubusercontent.com/fifthtry/caffeine-resume/ma
 - Language: components/language
 - Location: components/location
 - Profile: components/profile
+- Project: components/project
+- Publication: components/publication
 - Reference: components/reference
 - Skills: components/skills
 - Volunteer: components/volunteer

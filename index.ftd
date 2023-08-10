@@ -709,17 +709,17 @@ spacing.fixed.px: 4
 
 -- ftd.text: $contact-section.candidate-address
 if: { contact-section.candidate-address != NULL }
-color: $bright-grey
+color: $inherited.colors.text
 role: $inherited.types.copy-small
 
 -- ftd.text: $contact-section.candidate-address-city
 if: { contact-section.candidate-address-city != NULL }
-color: $bright-grey
+color: $inherited.colors.text
 role: $inherited.types.copy-small
 
 -- ftd.text: $contact-section.candidate-address-region
 if: { contact-section.candidate-address-region != NULL }
-color: $bright-grey
+color: $inherited.colors.text
 role: $inherited.types.copy-small
 
 -- ftd.row:
@@ -727,7 +727,7 @@ width: fill-container
 
 -- ftd.text: $contact-section.candidate-address-countryCode
 if: { contact-section.candidate-address-countryCode != NULL }
-color: $bright-grey
+color: $inherited.colors.text
 role: $inherited.types.copy-small
 
 -- ftd.text: ,
@@ -737,7 +737,7 @@ role: $inherited.types.copy-small
 
 -- ftd.text: $contact-section.candidate-address-postalCode
 if: { contact-section.candidate-address-postalCode != NULL }
-color: $bright-grey
+color: $inherited.colors.text
 role: $inherited.types.copy-small
 margin-left.px: 8
 
@@ -789,7 +789,7 @@ margin-right.px: 16
 
 -- ftd.text: $image-text.title
 if: {image-text.title != NULL }
-color: $bright-grey
+color: $inherited.colors.text
 role: $inherited.types.copy-small
 
 -- end: ftd.row
@@ -882,7 +882,7 @@ margin-bottom.px: 16
 if: { keyword-card.name != NULL }
 width.fixed.percent: 30
 role: $inherited.types.copy-small
-color: $bright-grey
+color: $inherited.colors.text
 
 -- ftd.column:
 width.fixed.percent: 60
@@ -1168,10 +1168,10 @@ spacing.fixed.px: 12
 -- ftd.text: $education-section.institution
 if: { education-section.institution != NULL}
 link if { education-section.url != NULL }: $education-section.url
-color: $bright-grey
+color: $inherited.colors.text
 
 -- ftd.text: $education-section.studyType
-color: $bright-grey
+color: $inherited.colors.text
 
 -- ftd.text: $education-section.area
 if: { education-section.area != NULL }
@@ -1246,7 +1246,7 @@ width: fill-container
 
 -- ftd.text: $work-section.name
 if: { work-section.name != NULL }
-color: $bright-grey
+color: $inherited.colors.text
 width: fill-container
 
 -- ftd.text: $work-section.location
@@ -1284,7 +1284,7 @@ width: fill-container
 
 -- ftd.text: $work-section.name
 if: { work-section.name != NULL }
-color: $bright-grey
+color: $inherited.colors.text
 width: fill-container
 
 -- ftd.text: $work-section.location
@@ -1314,7 +1314,7 @@ if: { work-section.highlights != NULL }
 
 -- ftd.text: $work-section.summary
 if: { work-section.summary != NULL }
-color: $bright-grey
+color: $inherited.colors.text
 
 -- end: ftd.column
 
@@ -1382,7 +1382,7 @@ width: fill-container
 
 -- ftd.text: $refrences-section.name
 if: { refrences-section.name != NULL }
-color: $bright-grey
+color: $inherited.colors.text
 width: fill-container
 
 -- ftd.text: $refrences-section.position
@@ -1402,7 +1402,7 @@ spacing.fixed.px: 12
 
 -- ftd.text: $refrences-section.name
 if: { refrences-section.name != NULL }
-color: $bright-grey
+color: $inherited.colors.text
 width: fill-container
 
 -- ftd.text: $refrences-section.position
@@ -1488,12 +1488,12 @@ width: fill-container
 -- ftd.text: $project-section.name
 if: { project-section.name != NULL }
 link if {  project-section.url != NULL }: $project-section.url
-color: $bright-grey
+color: $inherited.colors.text
 width: fill-container
 
 -- ftd.text: $project-section.role
 if: { project-section.role != NULL }
-color: $bright-grey
+color: $inherited.colors.text
 width: fill-container
 
 -- ftd.row:
@@ -1522,12 +1522,12 @@ spacing.fixed.px: 12
 -- ftd.text: $project-section.name
 if: { project-section.name != NULL }
 link if {  project-section.url != NULL }: $project-section.url
-color: $bright-grey
+color: $inherited.colors.text
 width: fill-container
 
 -- ftd.text: $project-section.role
 if: { project-section.role != NULL }
-color: $bright-grey
+color: $inherited.colors.text
 width: fill-container
 
 -- ftd.row:
@@ -1563,7 +1563,7 @@ if: {project-section.highlights != NULL }
 -- ftd.text: $project-section.description
 if: {project-section.description != NULL }
 width: fill-container
-color: $bright-grey
+color: $inherited.colors.text
 padding-top.px: 4
 
 -- end: ftd.column
@@ -1605,7 +1605,7 @@ if: { social-section.network != NULL }
 -- ftd.text: $social-section.username
 link if {$social-section.url  != NULL }: $social-section.url
 width.fixed.percent: 60
-color: $bright-grey
+color: $inherited.colors.text
 
 -- end: ftd.row
 
@@ -1648,7 +1648,7 @@ if: { interest-section.name != NULL }
 -- end: ftd.row
 
 --  ftd.text: $interest-section.keyword
-color: $bright-grey
+color: $inherited.colors.text
 width.fixed.percent: 60
 
 -- end: ftd.row
@@ -1678,7 +1678,7 @@ role: $inherited.types.copy-small
 
 -- ftd.text: $achievement-section.awarder
 if: {achievement-section.awarder != NULL }
-color: $bright-grey
+color: $inherited.colors.text
 
 -- ftd.row:
 width: fill-container
@@ -1686,25 +1686,25 @@ padding-horizontal.px: 24
 
 -- ftd.text: $achievement-section.position
 if: { achievement-section.position != NULL }
-color: $bright-grey
+color: $inherited.colors.text
 width: fill-container
 
 --- ftd.text: $achievement-section.title
 if: { achievement-section.title != NULL }
-color: $bright-grey
+color: $inherited.colors.text
 width: fill
 margin-top: 12
 
 -- ftd.text: $achievement-section.date
 if: { achievement-section.date != NULL }
 width: fill-container
-color: $bright-grey
+color: $inherited.colors.text
 
 
 -- ftd.text: $achievement-section.summary
 if: { achievement-section.summary != NULL }
 width: fill-container
-color: $bright-grey
+color: $inherited.colors.text
 
 -- end: ftd.row
 
@@ -1749,7 +1749,7 @@ width: fill-container
 -- ftd.text: $certificate-section.name
 if: { certificate-section.name != NULL }
 link if {certificate-section.url != NULL }: $certificate-section.url
-color: $bright-grey
+color: $inherited.colors.text
 width: fill-container
 
 -- ftd.text: $certificate-section.date
@@ -1767,7 +1767,7 @@ width: fill-container
 -- ftd.text: $certificate-section.name
 if: { certificate-section.name != NULL }
 link if {certificate-section.url != NULL }: $certificate-section.url
-color: $bright-grey
+color: $inherited.colors.text
 width: fill-container
 
 -- ftd.text: $certificate-section.date
@@ -1817,12 +1817,12 @@ width: fill-container
 -- ftd.text: $volunteer-section.organization
 if: { volunteer-section.organization != NULL }
 link if { volunteer-section.url != NULL }: $volunteer-section.url
-color: $bright-grey
+color: $inherited.colors.text
 width: fill-container
 
 -- ftd.text: $volunteer-section.position
 if: { volunteer-section.position != NULL }
-color: $bright-grey
+color: $inherited.colors.text
 width: fill-container
 
 -- ftd.row:
@@ -1850,12 +1850,12 @@ spacing.fixed.px: 12
 -- ftd.text: $volunteer-section.organization
 if: { volunteer-section.organization != NULL }
 link if { volunteer-section.url != NULL }: $volunteer-section.url
-color: $bright-grey
+color: $inherited.colors.text
 width: fill-container
 
 -- ftd.text: $volunteer-section.position
 if: { volunteer-section.position != NULL }
-color: $bright-grey
+color: $inherited.colors.text
 width: fill-container
 
 -- ftd.row:
@@ -1879,7 +1879,7 @@ if: { volunteer-section.endDate != NULL }
 -- ftd.text: $volunteer-section.summary
 if:  {volunteer-section.summary != NULL }
 width: fill-container
-color: $bright-grey
+color: $inherited.colors.text
 
 -- end: ftd.column
 
@@ -1920,7 +1920,7 @@ width: fill-container
 
 -- ftd.text: $acheivement-section.title
 if: { acheivement-section.title != NULL }
-color: $bright-grey
+color: $inherited.colors.text
 width: fill-container
 
 -- ftd.text: $acheivement-section.date
@@ -1937,7 +1937,7 @@ spacing.fixed.px: 12
 
 -- ftd.text: $acheivement-section.title
 if: { acheivement-section.title != NULL }
-color: $bright-grey
+color: $inherited.colors.text
 width: fill-container
 
 -- ftd.text: $acheivement-section.date
@@ -1953,15 +1953,3 @@ if: { acheivement-section.summary != NULL }
 -- end: ftd.column
 
 -- end: acheivement-section
-
-
-
-
-
-
-
-
--- ftd.color bright-grey:
-light: rgba(230, 225, 222, 1)
-dark: rgba(230, 225, 222, 1)
-
