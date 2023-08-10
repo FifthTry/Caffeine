@@ -37,12 +37,12 @@ lang: ftd
 lang: ftd
 
 \-- john-doe.profile: Twitter
-username: GaneshS05739912
-url: https://twitter.com/GaneshS05739912
+username: johndoe
+url: https://twitter.com/john
 
 \-- john-doe.profile: Linked-in
-username: ganesh-s-891174ab
-url: https://www.linkedin.com/in/ganesh-s-891174ab/
+username: johndoe
+url: https://twitter.com/john
 
 -- site-doc.header: Properties:
 

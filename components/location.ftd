@@ -36,11 +36,11 @@ lang: ftd
 -- cb.code: Modify below basic info with your info:
 lang: ftd
 
-\-- john-doe.location: Plot No.7, Vrindawan Nagar
-postalCode: 424101
-city: Chalisgaon
-countryCode: IN
-region: Maharashtra
+\-- john-doe.location: 2712 Broadway 
+postalCode: CA 94115
+city: Francisco
+countryCode: US
+region: California
 
 -- site-doc.header: Properties:
 

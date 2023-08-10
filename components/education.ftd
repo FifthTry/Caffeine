@@ -36,14 +36,23 @@ lang: ftd
 -- cb.code: Modify below education details info with your info:
 lang: ftd
 
-\-- john-doe.education: University of YCMOU, Nasik
-url: https://ycmou.digitaluniversity.ac/
-area: Arts
+\-- john-doe.education: University of Oklahoma
+url: /
+area: Management Information Technology
+studyType: Masters
+startDate: Aug-2007
+endDate: Jan-2009
+score: 9.0
+courses: Business, Cybersecurity
+
+\-- john-doe.education: University of Oklahoma
+url: /
+area: Information Technology
 studyType: Bachelors
-startDate: May-2009
-endDate: Jan-2012
-score: 7.0
-courses: English, Social Science, Arts and Culture
+startDate: Aug-2004
+endDate: Jan-2007
+score: 8.0
+courses: C++, Java
 
 -- site-doc.header: Properties:
 

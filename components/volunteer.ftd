@@ -36,14 +36,21 @@ lang: ftd
 -- cb.code: Modify below volunteer details info with your info:
 lang: ftd
 
-\-- john-doe.volunteer: Lions Club of Nagpur
+\-- john-doe.volunteer: AI dreams
 position: Lead volunteer
 url: /
-startDate: Jan 2001
-endDate: Dec 2003
-summary: Lions club of Nagpur ayurved launched computer literacy programme and I was district lead volunteer. I helped them to open 25 computer literacy centers in Chandrapur, Yawatmal district.
-highlights: Honored as best center director for educating 300+ students in my Institute of computer science.
+startDate: Oct 2011
+endDate: Dec 2014
+summary: Helped launch eight student tech startups. Helped manage program platform. Student magazine editor volunteer.
+highlights: Honored as editor for student magazine.
 
+\-- john-doe.volunteer: Technician mentorship program
+position: Mentor
+url: /
+startDate: Feb 2009 
+endDate: Oct 2011
+summary: Volunteered as a mentor. Helped students gain basic IT skills. Taught and offered guidance to trainees on new computer programs.
+highlights: Honored with student choice award for best mentor.
 
 -- site-doc.header: Properties:
 

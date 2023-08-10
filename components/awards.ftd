@@ -36,10 +36,10 @@ lang: ftd
 -- cb.code: Modify below awards details info with your info:
 lang: ftd
 
-\-- john-doe.award: Best center co-ordinator and director
-date: Aug-2002
-awarder: Lions club of Nagpur - ayurved
-summary: Received for my computer literacy centre Institute of Computer Science.
+\-- john-doe.award: Website of the day
+date: Aug-2014
+awarder: Awwward
+summary: Received for my website domain.com.
 
 -- site-doc.header: Properties:
 

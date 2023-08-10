@@ -44,33 +44,41 @@ level: expert
 \-- keywords: SCSS / CSS 
 level: expert
 
-\-- keywords: Javascript
-level: advance
-
-\-- keywords: JQuery
-level: advance
-
-\-- keywords: React JS
-level: advance
-
-\-- keywords: Bootstrap
+\-- keywords: Javascript / React
 level: advance
 
 \-- john-doe.skill:  Backend
 
-\-- keywords: Magento
+\-- keywords: Node
 level: beginner
 
-\-- keywords: Demandware
+\-- keywords: Ruby
 level: beginner
 
-\-- keywords: DJango Python
+\-- keywords: Python
 level: beginner
 
-\-- keywords: Java 
+\-- keywords: Postgres 
 level: beginner
 
-\-- keywords: Shopify
+\-- keywords: Redis
+level: advance
+
+\-- keywords: Serverless
+level: advance
+
+\-- john-doe.skill: DEVOPS
+
+\-- keywords: AWS
+level: beginner
+
+\-- keywords: Cloud
+level: beginner
+
+\-- keywords: Heroku
+level: beginner
+
+\-- keywords: Caching 
 level: advance
 
 -- site-doc.header: Properties:

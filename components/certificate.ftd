@@ -36,20 +36,20 @@ lang: ftd
 -- cb.code: Modify below certificate details info with your info:
 lang: ftd
 
-\-- john-doe.certificate: P.G.D.C.A.
-date: 1998-1999
-issuer: Nehru Yuva Kendra, Delhi
-url: https://nyks.nic.in/
+\-- john-doe.certificate: AWS Certified Solutions - Architect - Professional
+date: Dec-2019
+issuer: Amazon Web Services
+url: /
 
-\-- john-doe.certificate: C.C.C.O.
-date: 1999-2000
-issuer: M.S.Board of Vocational Education, Mumbai
-url: http://www.msbve.gov.in/
+\-- john-doe.certificate: Oracle Certified Professional - Java SE 17 Developer
+date: July-2018
+issuer: Oracle
+url: /
 
-\-- john-doe.certificate: AJILE Crash Course
-date: June - 2019
-issuer: Udemy
-url: https://www.udemy.com/
+\-- john-doe.certificate: CCNA Routing and Switching
+date: Jun-2017
+issuer: Cisco
+url: /
 
 -- site-doc.header: Properties:
 

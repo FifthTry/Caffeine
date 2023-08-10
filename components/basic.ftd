@@ -36,15 +36,15 @@ lang: ftd
 -- cb.code: Modify below basic info with your info:
 lang: ftd
 
-\-- john-doe.basic: Ganesh S Salunke
-label: Frontend Manager
-email: ganesh.salunke@hotmail.com
-phone: +91 9987915037
-url: https://ganeshsalunke.com
-maritalStatus: Married
-dateOfBirth: 16th Nov 1977
-summary: Courteous and enthusiastic, I am interested in IT and everything in its orbit. I am fascinated by web programming, e.g. developing apps and building websites. Recently joined my friend's startup company as a Senior Frontend Manager. I gained 14 years of experience working in the frontend development area. As this area compliments my interest in frontend. I am keen to gain more experience in the field. In 14 years I worked on jQuery, DoJo JS, Bootstrap, React JS, HTML, CSS. My favorite domain is ecommerce and I worked with known international brands like Allen Solly, Van Heusen, Peter England, Jaeger-UK, philosophy, OneHugeStep, YelloFashion etc.
-image: $assets.files.static.ganesh-profile-picture.jp
+\-- john-doe.basic: John Doe
+label: Web Developer
+email: john@gmail.com
+phone: (912) 555-4321
+url: https://johndoe.com
+maritalStatus: Single
+dateOfBirth: 03rd Jan 1986
+summary: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+image: $assets.files.profile-picture.jpg
 
 -- site-doc.header: Properties:
 
