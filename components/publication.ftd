@@ -1,0 +1,82 @@
+-- import: fastn-community.github.io/code-block as cb
+-- import: fifthtry.github.io/caffeine-resume
+-- import: fifthtry.github.io/resume/sample as s
+
+
+-- site-doc.doc-home: Publications Info
+site-title: Caffeine-resume
+show-tabs: false
+
+-- site-doc.component-doc: `caffeine-resume`
+package-link: fifthtry.github.io/caffeine-resume
+package-name: fifthtry.github.io/caffeine-resume
+info: `-- caffeine-resume` can be used as resume on your fastn web projects.
+
+-- site-doc.header: How to use
+
+-- cb.code: Add `resume` dependency into your FASTN.ftd
+lang: ftd
+
+\-- fastn.dependency: fifthtry.github.io/resume
+\-- fastn.dependency: fifthtry.github.io/caffeine-resume
+
+-- cb.code: Import `resume` into your `.ftd` file
+lang: ftd
+
+\-- import: fifthtry.github.io/caffeine-resume
+\-- import: fifthtry.github.io/resume as cv
+
+-- cb.code: Write below code to your `.ftd` file
+lang: ftd
+
+\-- cv.resume john-doe:
+
+-- site-doc.header: Resume Project Info:
+
+-- cb.code: Modify below publication details info with your info:
+lang: ftd
+
+\-- john-doe.publication: Chasing the Higgs Boson
+publisher: The New York Times
+releaseDate: Mar 2013
+url: /
+summary: Integer luctus erat at sapien pharetra, nec elementum diam euismod. Maecenas condimentum eu nisi ut aliquet. Donec vitae ultricies risus. Donec commodo justo at odio cursus, nec mattis tellus dignissim.
+
+\-- john-doe.publication: Clean Code: A Handbook of Agile Software Craftsmanship
+publisher: Pearson
+releaseDate: Aug 2008
+url: /
+summary: Morbi lobortis sodales nisi, et vulputate diam posuere vitae. Phasellus sollicitudin vehicula justo vel tincidunt. Donec faucibus magna ut sollicitudin tincidunt. Etiam sodales neque eu mollis egestas. Nam nisl nulla, iaculis sit amet condimentum quis, iaculis ut ex. Donec gravida efficitur ligula, ac auctor magna efficitur vel.
+
+-- site-doc.header: Properties:
+
+Below are details of all properties of this component.
+
+-- site-doc.component-property: `title`
+type: caption (`required`)
+
+It's used to show `title` for the publication sections.
+
+-- site-doc.component-property: `publisher`
+type: string (`required`)
+
+It's used to show `publisher` for the publication.
+
+-- site-doc.component-property: `url`
+type: link (`required`)
+
+It's used to show `url` for the publication.
+
+-- site-doc.component-property: `releaseDate`
+type: string (`required`)
+
+It's used to show `releaseDate` for the publication.
+
+-- site-doc.component-property: `summary`
+type: string (`required`)
+
+It's used to show `summary` for the publication.
+
+-- end: site-doc.component-doc
+
+-- end: site-doc.doc-home
